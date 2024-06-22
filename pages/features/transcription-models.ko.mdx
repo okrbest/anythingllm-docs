@@ -1,6 +1,6 @@
 ---
-title: "Transcription Models"
-description: "AnythingLLM supports custom audio transcription providers."
+title: "음성 인식 모델"
+description: "TeamplGPT는 사용자 지정 오디오 인식 제공자를 지원합니다."
 ---
 
 import { Cards } from "nextra/components";
@@ -11,20 +11,20 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Transcription Models"
+  alt="TeamplGPT Transcription Models"
 />
 
-# Transcription Models
+# 음성 인식 모델
 
-AnythingLLM supports custom audio transcription providers.
+TeamplGPT는 사용자 지정 오디오 인식 제공자를 지원합니다.
 
-## Supported Transcription Model Providers
+## 지원되는 음성 인식 모델 제공자
 
-### Local Transcription Model Providers
+### 로컬 음성 인식 모델 제공자
 
 <Cards>
   <Card
-    title="Built-in (Xenova)"
+    title="내장 (Xenova)"
     href="https://huggingface.co/Xenova/whisper-small"
   >
     <Image
@@ -32,12 +32,12 @@ AnythingLLM supports custom audio transcription providers.
       height={1080}
       width={1920}
       quality={100}
-      alt="AnythingLLM Built-in (Xenova)"
+      alt="TeamplGPT Built-in (Xenova)"
     />
   </Card>
 </Cards>
 
-### Cloud Transcription Model Providers
+### 클라우드 음성 인식 모델 제공자
 
 <Cards>
   <Card title="OpenAI" href="https://platform.openai.com/">
@@ -67,6 +67,6 @@ export const Card = Object.assign(
 <style global jsx>{`
   img {
     aspect-ratio: 16/9;
-    object-fit: cover;
+    object-fit: cover.
   }
 `}</style>

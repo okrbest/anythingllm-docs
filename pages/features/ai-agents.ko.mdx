@@ -1,6 +1,6 @@
 ---
-title: "AI Agents"
-description: "Agents on AnythingLLM can scrape websites, list and summarize your documents, search the web, make charts, and even save files to desktop and their own memory."
+title: "AI 에이전트"
+description: "TeamplGPT의 에이전트는 웹사이트를 스크래핑하고, 문서를 나열하고 요약하며, 웹을 검색하고, 차트를 만들고, 파일을 데스크탑과 자체 메모리에 저장할 수 있습니다."
 ---
 
 import { Callout } from "nextra/components";
@@ -12,23 +12,22 @@ import Link from "next/link";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents"
+  alt="TeamplGPT AI Agents"
 />
 
-# AI Agents
+# AI 에이전트
 
-Agents are basically an LLM that has access to some simple tools. We will be adding much more customization in this area soon. All agents share the same tools across workspaces, but operate within the workspace they were invoked via `@agent`.
+에이전트는 기본적으로 일부 간단한 도구에 액세스할 수 있는 LLM입니다. 이 영역에서 더 많은 사용자 정의 기능을 곧 추가할 예정입니다. 모든 에이전트는 작업 공간 전체에서 동일한 도구를 공유하지만 `@agent`를 통해 호출된 작업 공간 내에서 작동합니다.
 
-You can start an agent session by going into any workspace and typing `@agent <your prompt>` and exit by just typing `exit`
+에이전트 세션을 시작하려면 아무 작업 공간에 들어가 `@agent <your prompt>`을 입력하고, `exit`을 입력하여 종료할 수 있습니다.
 
-Agents can scrape websites, list and summarize your documents, search the web, make charts, and even save files to desktop and their own memory.
+에이전트는 웹사이트를 스크래핑하고, 문서를 나열하고 요약하며, 웹을 검색하고, 차트를 만들고, 파일을 데스크탑과 자체 메모리에 저장할 수 있습니다.
 
 <Callout type="info" emoji="💡">
-  **Examples:** <br />
-    1: `@agent` what documents can you see - > LLM will "look" at what are the documents it can see
+  **예시:** <br />
+    1: `@agent` 어떤 문서를 볼 수 있나요 - > LLM은 볼 수 있는 문서를 "찾아봅니다"
 
-    2: `@agent` summarize readme.pdf - > LLM will summarize that specific embedded file
-
+    2: `@agent` readme.pdf를 요약해줘 - > LLM은 해당 특정 임베디드 파일을 요약합니다.
 </Callout>
 
 <Image
@@ -36,11 +35,11 @@ Agents can scrape websites, list and summarize your documents, search the web, m
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents"
+  alt="TeamplGPT AI Agents"
 />
 
 <div className="center-cta mt-20">
   <Link href="/agent/usage">
-    <b>View all the available `@agent` skills &rarr;</b>
+    <b>사용 가능한 모든 `@agent` 기술 보기 &rarr;</b>
   </Link>
 </div>

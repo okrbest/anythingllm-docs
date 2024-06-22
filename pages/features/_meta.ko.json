@@ -1,6 +1,6 @@
 {
   "all-features": {
-    "title": "All Features",
+    "title": "모든 기능",
     "theme": {
       "breadcrumb": false,
       "footer": true,
@@ -9,7 +9,7 @@
     }
   },
   "ai-agents": {
-    "title": "AI Agents",
+    "title": "AI 에이전트",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -18,7 +18,7 @@
     }
   },
   "api": {
-    "title": "API Access",
+    "title": "API 접근",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -27,7 +27,7 @@
     }
   },
   "customization": {
-    "title": "Appearance Customization",
+    "title": "외관 사용자 정의",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -36,7 +36,7 @@
     }
   },
   "chat-logs": {
-    "title": "Chat Logs",
+    "title": "채팅 로그",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -45,7 +45,7 @@
     }
   },
   "chat-widgets": {
-    "title": "Embedded Chat Widgets",
+    "title": "임베디드 채팅 위젯",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -54,7 +54,7 @@
     }
   },
   "event-logs": {
-    "title": "Event Logs",
+    "title": "이벤트 로그",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -63,7 +63,7 @@
     }
   },
   "embedding-models": {
-    "title": "Embedding Models",
+    "title": "임베딩 모델",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -72,7 +72,7 @@
     }
   },
   "language-models": {
-    "title": "Language Models",
+    "title": "언어 모델",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -81,7 +81,7 @@
     }
   },
   "transcription-models": {
-    "title": "Transcription Models",
+    "title": "음성 인식 모델",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -90,7 +90,7 @@
     }
   },
   "vector-databases": {
-    "title": "Vector Database",
+    "title": "벡터 데이터베이스",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -99,7 +99,7 @@
     }
   },
   "security-and-access": {
-    "title": "Security & Access",
+    "title": "보안 및 접근",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -108,7 +108,7 @@
     }
   },
   "privacy-and-data-handling": {
-    "title": "Privacy & Data Handling",
+    "title": "개인 정보 및 데이터 처리",
     "theme": {
       "breadcrumb": true,
       "footer": true,

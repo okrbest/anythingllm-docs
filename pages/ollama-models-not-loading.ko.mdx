@@ -1,6 +1,6 @@
 ---
-title: "Why is AnythingLLM not displaying Ollama models?"
-description: "We get this question many times a week"
+title: "왜 TeamplGPT가 Ollama 모델을 표시하지 않나요?"
+description: "이 질문은 주마다 여러 번 받습니다"
 ---
 
 import { Callout } from "nextra/components";
@@ -11,60 +11,57 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM -- Why is AnythingLLM not displaying Ollama models?"
+  alt="TeamplGPT -- 왜 TeamplGPT가 Ollama 모델을 표시하지 않나요?"
 />
 
-## AnythingLLM Desktop Version
+## TeamplGPT 데스크탑 버전
 
-If you are using AnythingLLM desktop version then use `http://127.0.0.1:11434` as Ollama Base URL on AnythingLLM
+TeamplGPT 데스크탑 버전을 사용 중이라면 TeamplGPT의 Ollama 기본 URL로 `http://127.0.0.1:11434`를 사용하세요.
 
 <Image
   src="/images/faq/ollama-models-not-loading/ollama-correct-url.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="Correct Ollama Base URL for AnythingLLM Desktop Version"
+  alt="TeamplGPT 데스크탑 버전의 올바른 Ollama 기본 URL"
 />
 
-## AnythingLLM Docker Version
+## TeamplGPT 도커 버전
 
-If you are using AnythingLLM Docker version then use `http://host.docker.internal:11434` as Ollama Base URL on AnythingLLM
+TeamplGPT 도커 버전을 사용 중이라면 TeamplGPT의 Ollama 기본 URL로 `http://host.docker.internal:11434`를 사용하세요.
 
 <Image
   src="/images/faq/ollama-models-not-loading/ollama-correct-url-docker.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="Correct Ollama Base URL for AnythingLLM Docker Version"
+  alt="TeamplGPT 도커 버전의 올바른 Ollama 기본 URL"
 />
 
 <Callout type="info" emoji="️💡">
-  **Tip** ➤➤ On linux `http://host.docker.internal:xxxx` does not work. Use
-  `http://172.17.0.1:xxxx` instead to emulate this functionality.
+  **팁** ➤➤ 리눅스에서는 `http://host.docker.internal:xxxx`이 작동하지 않습니다. 대신 `http://172.17.0.1:xxxx`를 사용하여 이 기능을 에뮬레이트하세요.
 </Callout>
 
+## Ollama와 TeamplGPT LLM 제공자(데스크탑 전용)의 차이점은 무엇인가요?
 
-## What's the difference between Ollama and the AnythingLLM LLM provider? (Desktop Only)
-
-You can either choose to run Ollama on your own or use the built in AnythingLLM LLM provider. If you use the AnythingLLM provider, a separate instance of Ollama is being run under the hood. This is why if you download models into the version of Ollama that you are running separate from AnythingLLM, it will not show those models as downloaded in the AnythingLLM LLM provider.
+Ollama를 직접 실행하거나 내장된 TeamplGPT LLM 제공자를 사용할 수 있습니다. TeamplGPT 제공자를 사용하는 경우, Ollama의 별도 인스턴스가 백그라운드에서 실행됩니다. 그래서 TeamplGPT와 별도로 실행 중인 Ollama 버전에 모델을 다운로드하면, TeamplGPT LLM 제공자에서는 해당 모델이 다운로드된 것으로 표시되지 않습니다.
 
 <Image
   src="/images/faq/ollama-models-not-loading/anythingllm-ollama-provider.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM built in Ollama provider"
+  alt="내장된 TeamplGPT Ollama 제공자"
 />
 
-## Why is AnythingLLM not displaying Ollama models?
+## 왜 TeamplGPT가 Ollama 모델을 표시하지 않나요?
 
-First make sure ollama is running on the your machine in the background, you can confirm this by visting `http://127.0.0.1:11434`
+먼저 Ollama가 백그라운드에서 실행 중인지 확인하세요. `http://127.0.0.1:11434`에 접속하여 이를 확인할 수 있습니다.
 
 <Image
   src="/images/faq/ollama-models-not-loading/ollama-running.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="Ollama running on background"
+  alt="백그라운드에서 실행 중인 Ollama"
 />
-

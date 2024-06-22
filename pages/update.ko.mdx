@@ -1,6 +1,6 @@
 ---
-title: "Update"
-description: "Learn how to update AnythingLLM"
+title: "업데이트"
+description: "TeamplGPT 업데이트 방법을 알아보세요"
 ---
 
 import { Cards, Callout } from "nextra/components";
@@ -11,48 +11,47 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Update"
+  alt="TeamplGPT 업데이트"
 />
 
-## Updating on MacOS
+## MacOS에서 업데이트하기
 
-### Updating using Installation file
+### 설치 파일을 사용하여 업데이트하기
 
-Simply download the latest version of the installation `dmg` from the [download page](https://useanything.com/download) and then re-install the app and it will overwrite the existing application while persisting your storage and progress.
+[다운로드 페이지](https://useanything.com/download)에서 최신 버전의 `dmg` 설치 파일을 다운로드한 다음 앱을 다시 설치하면 기존 애플리케이션을 덮어쓰면서 저장소와 진행 상황이 유지됩니다.
 
-### Updating using Homebrew
+### Homebrew를 사용하여 업데이트하기
 
 <Callout type="warning" emoji="⚠️">
-  **Note:** ➤➤ You can only update using Homebrew if you initially installed
-  AnythingLLM using Homebrew.
+  **주의:** ➤➤ 초기 설치 시 Homebrew를 사용한 경우에만 Homebrew를 사용하여 업데이트할 수 있습니다.
 </Callout>
 
-Simply run the below command on your terminal
+터미널에서 아래 명령어를 실행하세요
 
 ```shell copy
  brew update && brew upgrade --cask anythingllm
 ```
 
-This command will overwrite the existing application with the new version while persisting your storage and progress.
+이 명령어는 기존 애플리케이션을 새 버전으로 덮어쓰며 저장소와 진행 상황이 유지됩니다.
 
 ---
 
-## Updating on Windows
+## Windows에서 업데이트하기
 
-Simply download the latest version of the installation `.exe` from the [download page](https://useanything.com/download) and then re-install the app and it will overwrite the existing application while persisting your storage and progress.
-
----
-
-## Updating on Linux
-
-Simply download the latest version of the installation `.AppImage` from the [download page](https://useanything.com/download) and then execute this new `.AppImage` and delete the old one. This will persist your data, but allow you to use the latest version of the software.
+[다운로드 페이지](https://useanything.com/download)에서 최신 버전의 설치 `.exe` 파일을 다운로드한 다음 앱을 다시 설치하면 기존 애플리케이션을 덮어쓰면서 저장소와 진행 상황이 유지됩니다.
 
 ---
 
-## Updating on Docker
+## Linux에서 업데이트하기
 
-- Stop the container currently running AnythingLLM so the port is freed.
-- `docker pull mintplexlabs/anythingllm` to pull the latest image.
-- Restart the container pointed at the same storage location defined during previous boot.
+[다운로드 페이지](https://useanything.com/download)에서 최신 버전의 설치 `.AppImage` 파일을 다운로드한 다음 새 `.AppImage` 파일을 실행하고 이전 파일을 삭제하면 데이터가 유지되면서 최신 버전의 소프트웨어를 사용할 수 있습니다.
 
-You should always deploy or start the AnythingLLM container using the command found in [our local docker setup](/installation/self-hosted/local-docker#recommend-way-to-run-dockerized-anythingllm)
+---
+
+## Docker에서 업데이트하기
+
+- 현재 실행 중인 TeamplGPT 컨테이너를 중지하여 포트를 해제합니다.
+- `docker pull mintplexlabs/anythingllm` 명령어로 최신 이미지를 가져옵니다.
+- 이전 부팅 시 정의된 동일한 저장소 위치를 가리키도록 컨테이너를 다시 시작합니다.
+
+항상 [로컬 도커 설정](/installation/self-hosted/local-docker#recommend-way-to-run-dockerized-anythingllm)에 있는 명령어를 사용하여 TeamplGPT 컨테이너를 배포하거나 시작해야 합니다.

@@ -1,6 +1,6 @@
 ---
-title: "Embedded Chat Widgets"
-description: "AnythingLLM allows you to create embedded chat widgets that can be easily integrated into any website"
+title: "임베디드 채팅 위젯"
+description: "TeamplGPT는 임베디드 채팅 위젯을 생성하여 어떤 웹사이트에도 쉽게 통합할 수 있습니다"
 ---
 
 import { Callout } from "nextra/components";
@@ -11,16 +11,15 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Embedded Chat Widgets"
+  alt="TeamplGPT Embedded Chat Widgets"
 />
 
-# Embedded Chat Widgets
+# 임베디드 채팅 위젯
 
 <Callout type="info" emoji="️💡">
-  **DOCKER VERSION ONLY!**
+  **도커 버전 전용!**
 
-    These settings are only available in the Docker version of AnythingLLM
-
+    이러한 설정은 TeamplGPT의 도커 버전에서만 사용할 수 있습니다.
 </Callout>
 
 <Image
@@ -31,11 +30,11 @@ import Image from "next/image";
   alt="Embedded Chat Widget"
 />
 
-AnythingLLM allows you to create embedded chat widgets that can be easily integrated into any website using a simple `<script>` tag. These embedded chat widgets provide a convenient way for users to interact with your chatbot directly from your website.
+TeamplGPT는 간단한 `<script>` 태그를 사용하여 어떤 웹사이트에도 쉽게 통합할 수 있는 임베디드 채팅 위젯을 생성할 수 있습니다. 이러한 임베디드 채팅 위젯은 사용자가 웹사이트에서 직접 챗봇과 상호 작용할 수 있는 편리한 방법을 제공합니다.
 
-## Configuration Options
+## 구성 옵션
 
-When creating an embedded chat widget, you have several configuration options available to customize its behavior and appearance.
+임베디드 채팅 위젯을 생성할 때 동작과 외관을 사용자 정의할 수 있는 여러 구성 옵션이 있습니다.
 
 <Image
   src="/images/features/chat-widgets/configuration-options.png"
@@ -45,20 +44,20 @@ When creating an embedded chat widget, you have several configuration options av
   alt="Embedded Chat Options 1"
 />
 
-### Workspace
+### 작업 공간
 
-The workspace setting determines which workspace your chat window will be based on. All defaults will be inherited from the selected workspace unless overridden by the specific configuration options.
+작업 공간 설정은 채팅 창이 기반할 작업 공간을 결정합니다. 선택한 작업 공간의 모든 기본값이 특정 구성 옵션에 의해 재정의되지 않는 한 상속됩니다.
 
-### Allowed Chat Method
+### 허용된 채팅 방법
 
-You can set how your chatbot should operate using the allowed chat method. There are two options:
+허용된 채팅 방법을 사용하여 챗봇의 동작 방식을 설정할 수 있습니다. 두 가지 옵션이 있습니다:
 
-- **Chat**: The chatbot will respond to all questions regardless of context.
-- **Query**: The chatbot will only respond to chats related to documents in the workspace.
+- **채팅**: 챗봇은 문맥에 상관없이 모든 질문에 응답합니다.
+- **쿼리**: 챗봇은 작업 공간의 문서와 관련된 채팅에만 응답합니다.
 
-### Restrict Requests from Domains
+### 도메인으로부터의 요청 제한
 
-This filter allows you to block any requests that come from domains other than the specified list. Leaving this field empty means anyone can use your embedded chat widget on any site.
+이 필터를 사용하여 지정된 목록 이외의 도메인에서 오는 모든 요청을 차단할 수 있습니다. 이 필드를 비워 두면 누구나 임베디드 채팅 위젯을 모든 사이트에서 사용할 수 있습니다.
 
 <Image
   src="/images/features/chat-widgets/domain-blacklist.png"
@@ -68,27 +67,27 @@ This filter allows you to block any requests that come from domains other than t
   alt="Embedded Chat Options 2"
 />
 
-### Max Chats per Day
+### 하루 최대 채팅 수
 
-You can limit the number of chats this embedded chat widget can process in a 24-hour period. Setting this value to zero means unlimited chats per day.
+이 임베디드 채팅 위젯이 24시간 동안 처리할 수 있는 채팅 수를 제한할 수 있습니다. 이 값을 0으로 설정하면 하루에 무제한 채팅이 가능합니다.
 
-### Max Chats per Session
+### 세션당 최대 채팅 수
 
-You can limit the number of chats a session user can send with this embedded chat widget in a 24-hour period. Setting this value to zero means unlimited chats per session.
+이 임베디드 채팅 위젯을 사용하여 세션 사용자에게 24시간 동안 보낼 수 있는 채팅 수를 제한할 수 있습니다. 이 값을 0으로 설정하면 세션당 무제한 채팅이 가능합니다.
 
-### Enable Dynamic Model Use
+### 동적 모델 사용 활성화
 
-By enabling dynamic model use, you allow the setting of the preferred LLM model to override the workspace default.
+동적 모델 사용을 활성화하면 기본 작업 공간을 재정의하여 선호하는 LLM 모델 설정을 허용합니다.
 
-### Enable Dynamic LLM Temperature
+### 동적 LLM 온도 활성화
 
-Enabling dynamic LLM temperature allows the setting of the LLM temperature to override the workspace default.
+동적 LLM 온도를 활성화하면 기본 작업 공간을 재정의하여 LLM 온도 설정을 허용합니다.
 
-### Enable Prompt Override
+### 프롬프트 재정의 활성화
 
-By enabling prompt override, you allow the setting of the system prompt to override the workspace default.
+프롬프트 재정의를 활성화하면 기본 작업 공간을 재정의하여 시스템 프롬프트 설정을 허용합니다.
 
-## Embedding the Chat Widget
+## 채팅 위젯 임베드
 
 <Image
   src="/images/features/chat-widgets/embed-code.png"
@@ -98,4 +97,4 @@ By enabling prompt override, you allow the setting of the system prompt to overr
   alt="Embedded Chat Code"
 />
 
-After creating an embedded chat widget, you will be provided with a link that you can publish on your website using a simple `<script>` tag. This allows you to easily integrate the chat widget into your website's HTML code.
+임베디드 채팅 위젯을 생성한 후에는 간단한 `<script>` 태그를 사용하여 웹사이트에 게시할 수 있는 링크가 제공됩니다. 이를 통해 웹사이트의 HTML 코드에 채팅 위젯을 쉽게 통합할 수 있습니다.

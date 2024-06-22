@@ -1,6 +1,6 @@
 ---
-title: "Security and Access"
-description: "Security features of AnythingLLM"
+title: "보안 및 접근"
+description: "TeamplGPT의 보안 기능"
 ---
 
 import { Callout } from "nextra/components";
@@ -11,69 +11,67 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Security and Access"
+  alt="TeamplGPT Security and Access"
 />
 
-# Security and Access
+# 보안 및 접근
 
 <Callout type="info" emoji="️💡">
-  **DOCKER VERSION ONLY!**
+  **도커 버전 전용!**
 
-    These settings are only available in the Docker version of AnythingLLM
-
+    이러한 설정은 TeamplGPT의 도커 버전에서만 사용할 수 있습니다.
 </Callout>
 
-AnythingLLM supports two types of use cases: **single-user** and **multi-user** mode.
+TeamplGPT는 **단일 사용자** 및 **다중 사용자** 모드의 두 가지 사용 사례를 지원합니다.
 
-## Single-user Mode
+## 단일 사용자 모드
 
-Single-user mode is preferred for those who only themselves or a select group of trusted people will use the instance. If you want to have per-user permissions, you should switch to multi-user mode.
+단일 사용자 모드는 본인 또는 선택된 신뢰할 수 있는 소수의 사람들만 인스턴스를 사용할 경우에 적합합니다. 사용자별 권한을 부여하려면 다중 사용자 모드로 전환해야 합니다.
 
-In single-user mode, you (and only you) have complete control over the instance. Anyone with the password to the instance, if set, will be able to use the instance, change any configuration or settings, and view all chats.
+단일 사용자 모드에서는 사용자(단독 사용자)가 인스턴스에 대한 완전한 제어권을 가집니다. 인스턴스에 대한 비밀번호가 설정된 경우, 비밀번호를 가진 사람은 누구나 인스턴스를 사용할 수 있으며, 모든 구성 및 설정을 변경하고 모든 채팅을 볼 수 있습니다.
 
-### Password Protecting the Instance
+### 인스턴스 비밀번호 보호
 
-When using AnythingLLM in "single user mode," you can password protect the instance by toggling on the "Password Protect Instance" option. This will display an input where you can enter the password to protect the instance.
+"단일 사용자 모드"에서 TeamplGPT를 사용할 때 "비밀번호로 인스턴스 보호" 옵션을 켜서 인스턴스를 비밀번호로 보호할 수 있습니다. 이렇게 하면 인스턴스를 보호할 비밀번호를 입력할 수 있는 입력란이 표시됩니다.
 
 <Image
   src="/images/features/security-and-access/password-protection.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="Password Protect Instance"
+  alt="비밀번호로 인스턴스 보호"
 />
 
-You can turn off password protection at any time or reset the password to the instance while logged in.
+로그인한 상태에서 언제든지 비밀번호 보호를 해제하거나 인스턴스 비밀번호를 재설정할 수 있습니다.
 
-## Multi-user Mode
+## 다중 사용자 모드
 
 <Callout type="warning" emoji="️⚠️">
-  **Warning**
+  **경고**
 
-    Once in multi-user mode, you cannot revert back to single-user mode
-
+    다중 사용자 모드로 전환한 후에는 다시 단일 사용자 모드로 되돌릴 수 없습니다.
 </Callout>
 
-The preferred method of use for AnythingLLM is **multi-user mode**. In this mode, you can set per-user role-based access permissions.
+TeamplGPT의 권장 사용 방법은 **다중 사용자 모드**입니다. 이 모드에서는 사용자별 역할 기반 접근 권한을 설정할 수 있습니다.
 
-By default, you will create the administrator account, which has the highest level of privilege. As an administrator, you will have access to the entire system, logs, analytics, and more.
+기본적으로 최고 수준의 권한을 가진 관리자 계정을 생성합니다. 관리자로서 시스템 전체, 로그, 분석 등에 접근할 수 있습니다.
 
-### User Roles
+### 사용자 역할
 
-- **Admin**: Full access to the entire system
-- **Manager**: Can view all workspaces and manage all properties except for settings for LLM, Embedder, and Vector database
-- **Default**: Can only send chats to workspaces they are explicitly added to. Cannot see or edit any workspaces or system settings.
+- **관리자**: 시스템 전체에 대한 전체 접근 권한
+- **관리자**: 모든 작업 공간을 보고 모든 속성을 관리할 수 있지만, LLM, 임베더, 벡터 데이터베이스 설정은 제외
+- **기본**: 명시적으로 추가된 작업 공간에만 채팅을 보낼 수 있으며, 작업 공간이나 시스템 설정을 볼 수 없고 편집할 수 없음
 
-### Enabling Multi-user Mode
+### 다중 사용자 모드 활성화
 
-To enable multi-user mode, toggle on the "Enable multi-user mode" option. This will display an input where you can enter the username and password for the first admin account.
+다중 사용자 모드를 활성화하려면 "다중 사용자 모드 활성화" 옵션을 켜세요. 이렇게 하면 첫 번째 관리자 계정의 사용자 이름과 비밀번호를 입력할 수 있는 입력란이 표시됩니다.
 
 <Image
   src="/images/features/security-and-access/multi-user-mode.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="Enable Multi-user Mode"
+  alt="다중 사용자 모드 활성화"
 />
 
-This will be the default admin account that you will use to control the instance. Once set, you will be logged out so you can log in with the new password.
+이것이 인스턴스를 제어하는 데 사용할 기본 관리자 계정이 됩니다. 설정 후 새 비밀번호로 로그인할 수 있도록 로그아웃됩니다.

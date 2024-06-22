@@ -1,6 +1,6 @@
 ---
-title: "Debug"
-description: "Learn how to run AnythingLLM in debug mode"
+title: "디버그"
+description: "TeamplGPT를 디버그 모드로 실행하는 방법을 알아보세요"
 ---
 
 import { Cards } from "nextra/components";
@@ -11,22 +11,21 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Debug Mode"
+  alt="TeamplGPT Debug Mode"
 />
 
-## AnythingLLM Debug mode on MacOS
+## MacOS에서 TeamplGPT 디버그 모드
 
-To run the AnythingLLM Application in debug mode (if you are getting errors) you can open a Terminal and navigate to `~/Applications/AnythingLLM/Content/MacOs` where you can then run the executable and see all application logs while running AnythingLLM.
+TeamplGPT 애플리케이션을 디버그 모드로 실행하려면 (오류가 발생하는 경우) 터미널을 열고 `~/Applications/TeamplGPT/Content/MacOs`로 이동하세요. 그런 다음 실행 파일을 실행하면 TeamplGPT를 실행하는 동안 모든 애플리케이션 로그를 볼 수 있습니다.
 
-## AnythingLLM Debug mode on Windows
+## Windows에서 TeamplGPT 디버그 모드
 
-To run the AnythingLLM Application in debug mode (if you are getting errors) you can open a CMD or Powershell window and run the path to the AnythingLLM executable. Typically this is in `C:\Users\usr\AppData\Local\Programs\anythingllm-desktop\AnythingLLMDesktop.exe`.
-This will print all logs to the powershell window while running and should display a verbose error once encountered that is critical for debugging.
+TeamplGPT 애플리케이션을 디버그 모드로 실행하려면 (오류가 발생하는 경우) CMD 또는 Powershell 창을 열고 TeamplGPT 실행 파일의 경로를 실행하세요. 일반적으로 이는 `C:\Users\usr\AppData\Local\Programs\teamplgpt-desktop\TeamplGPTDesktop.exe`에 있습니다. 이를 통해 실행 중인 동안 모든 로그가 powershell 창에 출력되며, 디버깅에 중요한 자세한 오류가 표시됩니다.
 
-## AnythingLLM Debug mode on Linux
+## Linux에서 TeamplGPT 디버그 모드
 
-To run the AnythingLLM Application in debug mode (if you are getting errors) you can open a Terminal and navigate to `~/.config/anythingllm-desktop/AnythingLLMDesktop.AppImage` where you can then run the executable and see all AppImage logs while running AnythingLLM.
+TeamplGPT 애플리케이션을 디버그 모드로 실행하려면 (오류가 발생하는 경우) 터미널을 열고 `~/.config/teamplgpt-desktop/TeamplGPTDesktop.AppImage`로 이동하세요. 그런 다음 실행 파일을 실행하면 TeamplGPT를 실행하는 동안 모든 AppImage 로그를 볼 수 있습니다.
 
-## AnythingLLM Debug mode on Docker
+## Docker에서 TeamplGPT 디버그 모드
 
-Open `Container Logs` in Docker desktop or print the logs via `docker container <CONTAINER_ID> logs`
+Docker 데스크탑에서 `Container Logs`를 열거나 `docker container <CONTAINER_ID> logs` 명령어를 통해 로그를 출력하세요.

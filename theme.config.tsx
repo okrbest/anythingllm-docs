@@ -83,10 +83,10 @@ const config: DocsThemeConfig = {
         <meta name="twitter:url" content="https://docs.useanything.com" />
         <meta
           name="og:title"
-          content={title ? title + " – AnythingLLM Docs" : "AnythingLLM Docs"}
+          content={title ? title + " – TeamplGPT Docs" : "TeamplGPT Docs"}
         />
         <meta name="og:image" content={socialCard} />
-        <meta name="apple-mobile-web-app-title" content="AnythingLLM Docs" />
+        <meta name="apple-mobile-web-app-title" content="TeamplGPT Docs" />
         <link rel="icon" href="/favicon.png" type="image/png" />
       </>
     );
@@ -106,7 +106,7 @@ const config: DocsThemeConfig = {
         />
       </svg>
       <span style={{ marginLeft: ".7em", fontWeight: 700 }}>
-        AnythingLLM Docs
+        TeamplGPT Docs
       </span>
     </>
   ),
