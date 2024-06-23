@@ -1,6 +1,6 @@
 ---
-title: "AI Agents"
-description: "What are AI Agents in AnythingLLM and how to use them?"
+title: "AI 에이전트"
+description: "TeamplGPT에서 AI 에이전트란 무엇이며 어떻게 사용하나요?"
 ---
 
 import { Cards, Callout } from "nextra/components";
@@ -11,41 +11,41 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents"
+  alt="TeamplGPT AI Agents"
 />
 
-# AI Agents
+# AI 에이전트
 
-Agents are basically an LLM that has access to some simple tools. We will be adding much more customization in this area soon.
+에이전트는 기본적으로 몇 가지 간단한 도구에 접근할 수 있는 LLM입니다. 우리는 이 영역에 더 많은 사용자 정의 기능을 곧 추가할 예정입니다.
 
-All agents share the same tools across workspaces, but operate within the workspace they were invoked via `@agent`.
+모든 에이전트는 작업 공간 전체에서 동일한 도구를 공유하지만, `@agent`를 통해 호출된 작업 공간 내에서 작동합니다.
 
-## Quick Links
+## 빠른 링크
 
 <Cards>
-  <Card title="Agent Setup Guide" href="/agent/setup"> 
+  <Card title="에이전트 설정 가이드" href="/agent/setup"> 
     <Image
       src="/images/guides/ai-agents/setup.png" 
       height={1080} 
       width={1920} 
       quality={100}
-      alt="AnythingLLM Github Issues"
+      alt="TeamplGPT Agent Setup"
     />
   </Card>
 
-  <Card title="Agent Usage Guide" href="/agent/usage"> 
+  <Card title="에이전트 사용 가이드" href="/agent/usage"> 
     <Image
       src="/images/guides/ai-agents/usage.png" 
       height={1080} 
-      width={1920}
+      width={1920} 
       quality={100} 
-      alt="AnythingLLM Discord Community"
+      alt="TeamplGPT Agent Usage"
     />
   </Card>
 </Cards>
 
 export const Card = Object.assign(
-  // Copy card component and add default props
+  // 카드 구성 요소를 복사하고 기본 속성 추가
   Cards.Card.bind(),
   {
     displayName: "Card",

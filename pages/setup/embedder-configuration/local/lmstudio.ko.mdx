@@ -1,6 +1,6 @@
 ---
-title: "LM Studio Embedder"
-description: "LMStudio supports LLM and embedding GGUF models from HuggingFace that can be run on CPU or GPU."
+title: "LM Studio 임베더"
+description: "LMStudio는 CPU 또는 GPU에서 실행할 수 있는 HuggingFace의 LLM 및 임베딩 GGUF 모델을 지원합니다."
 ---
 
 import { Callout } from "nextra/components";
@@ -11,34 +11,34 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="LM Studio Embedder"
+  alt="LM Studio 임베더"
 />
 
-# LM Studio Embedder
+# LM Studio 임베더
 
 <Callout type="warning" emoji="️⚠️">
-  **Heads up!**
+  **알림!**
 
-    LMStudio's inference server only allows you to load multiple LLMs or a single embedding model, but not both. This means LMStudio cannot be both your LLM and embedder.
+    LMStudio의 추론 서버는 여러 개의 LLM 또는 단일 임베딩 모델만 로드할 수 있으며, 둘 다 동시에 사용할 수는 없습니다. 따라서 LMStudio는 LLM과 임베더를 동시에 수행할 수 없습니다.
 
 </Callout>
 
-[LMStudio](https://lmstudio.ai) supports LLM **and** embedding GGUF models from HuggingFace that can be run on CPU or GPU.
+[LMStudio](https://lmstudio.ai)는 CPU 또는 GPU에서 실행할 수 있는 HuggingFace의 LLM **및** 임베딩 GGUF 모델을 지원합니다.
 
-LMStudio is a _separate_ application that you need to download first and connect to.
+LMStudio는 별도의 애플리케이션으로 먼저 다운로드하여 연결해야 합니다.
 
-## Connecting to LM Studio
+## LM Studio에 연결하기
 
-When running LMStudio locally, you should connect to LMStudio by first running the built-in inference server.
+LMStudio를 로컬에서 실행할 때, 먼저 내장된 추론 서버를 실행하여 LMStudio에 연결해야 합니다.
 
-You **must** explicitly load the embedding model before starting the inference server.
+추론 서버를 시작하기 전에 임베딩 모델을 명시적으로 로드해야 합니다.
 
-You can update your model to a different model at any time in the **Settings**.
+**설정**에서 언제든지 다른 모델로 업데이트할 수 있습니다.
 
 <Image
   src="/images/anythingllm-setup/embedder-configuration/local/lmstudio/lmstudio-embedder.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="LM Studio Embedder"
+  alt="LM Studio 임베더"
 />

@@ -1,6 +1,6 @@
 ---
-title: "AI Agent Usage"
-description: "How to use AI Agents on AnythingLLM"
+title: "AI 에이전트 사용법"
+description: "TeamplGPT에서 AI 에이전트를 사용하는 방법"
 ---
 
 import { Cards, Card, Callout } from "nextra/components";
@@ -24,257 +24,257 @@ import Image from "next/image";
   alt="AI Agent Usage"
 />
 
-## How to use AI Agents?
+## AI 에이전트를 어떻게 사용하나요?
 
 <Callout type="warning" emoji="️⚠️">
-  **Note**
+  **참고**
 
-    Before you use AI Agents, you have to configure your AI Agents by following our [Agent Setup Guide](/agent/setup)
+    AI 에이전트를 사용하기 전에 [에이전트 설정 가이드](/agent/setup)를 따라 AI 에이전트를 구성해야 합니다.
 
 </Callout>
 
-Mention the agent by `@agent` to start an agent session. You can start an agent session anytime when using a workspace.
+에이전트 세션을 시작하려면 `@agent`로 에이전트를 호출하세요. 작업 공간을 사용하는 동안 언제든지 에이전트 세션을 시작할 수 있습니다.
 
 <Image
   src="/images/guides/ai-agents/trigger.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents Trigger"
+  alt="TeamplGPT AI Agents Trigger"
 />
 
-When you mention the agent, you will see a popup with the tools enabled for the agent on the workspace.
+에이전트를 호출하면 작업 공간에 활성화된 도구가 있는 팝업이 표시됩니다.
 
 <br />
-**Agents have access to the following tools:**
+**에이전트는 다음 도구에 접근할 수 있습니다:**
 
 <Cards>
   <Card
     icon={<BoxIcon />}
-    title="RAG Search"
-    href="#what-is-rag-search-and-how-to-use-it"
+    title="RAG 검색"
+    href="#rag-검색이란-무엇이며-어떻게-사용하나요"
   />
   <Card
     icon={<GlobeIcon />}
-    title="Web Browsing"
-    href="#what-is-web-browsing-and-how-to-use-it"
+    title="웹 브라우징"
+    href="#웹-브라우징이란-무엇이며-어떻게-사용하나요"
   />
   <Card
     icon={<RowsIcon />}
-    title="Web Scraping"
-    href="#what-is-web-scraping-and-how-to-use-it"
+    title="웹 스크래핑"
+    href="#웹-스크래핑이란-무엇이며-어떻게-사용하나요"
   />
   <Card
     icon={<FileIcon />}
-    title="Save Files"
-    href="#what-is-save-files-and-how-to-use-it"
+    title="파일 저장"
+    href="#파일-저장이란-무엇이며-어떻게-사용하나요"
   />
   <Card
     icon={<NewsletterIcon />}
-    title="List Documents"
-    href="#what-is-list-documents-and-how-to-use-it"
+    title="문서 목록"
+    href="#문서-목록이란-무엇이며-어떻게-사용하나요"
   />
   <Card
     icon={<CardsIcon />}
-    title="Summarize Documents"
-    href="#what-is-summarize-documents-and-how-to-use-it"
+    title="문서 요약"
+    href="#문서-요약이란-무엇이며-어떻게-사용하나요"
   />
   <Card
     icon={<DiagramIcon />}
-    title="Chart Generation"
-    href="#what-is-chart-generation-and-how-to-use-it"
+    title="차트 생성"
+    href="#차트-생성이란-무엇이며-어떻게-사용하나요"
   />
   <Card
     icon={<Database />}
-    title="SQL Agent"
-    href="#what-is-sql-agent-and-how-to-use-it"
+    title="SQL 에이전트"
+    href="#sql-에이전트란-무엇이며-어떻게-사용하나요"
   />
 </Cards>
 
-We will explained the intended use case of each tool below.
+각 도구의 의도된 사용 사례를 아래에 설명하겠습니다.
 
-## What is RAG Search and how to use it?
+## RAG 검색이란 무엇이며 어떻게 사용하나요?
 
-RAG search allows the agent to check what are the things the agent already know about a specific topic (requires some data to be embedded in workspace)
+RAG 검색을 사용하면 에이전트가 특정 주제에 대해 이미 알고 있는 내용을 확인할 수 있습니다(작업 공간에 일부 데이터가 포함되어 있어야 함).
 
-You can use RAG search by asking the agent something like `@agent can you check what you already know about AnythingLLM?`
+RAG 검색을 사용하려면 `@agent 너가 TeamplGPT에 대해 알고 있는 내용을 확인해줄 수 있니?`와 같이 에이전트에게 질문할 수 있습니다.
 
 <Image
   src="/images/guides/ai-agents/rag-search.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents RAG Search"
+  alt="TeamplGPT AI Agents RAG Search"
 />
 
-RAG search can update agent's own memory and that can be later used for recall in agent or regular chat. This embeds a virtual document you cannot manage.
+RAG 검색은 에이전트의 자체 메모리를 업데이트할 수 있으며, 이는 나중에 에이전트나 일반 채팅에서 호출하여 사용할 수 있습니다. 이는 관리할 수 없는 가상 문서를 포함합니다.
 
-Example: `Ah, great point. Can you summarize and save that summary for later to your memory`
+예시: `좋아, 중요한 점이야. 그 요약을 나중에 사용할 수 있도록 메모리에 저장해줄 수 있어?`
 
-## What is Web Browsing and how to use it?
+## 웹 브라우징이란 무엇이며 어떻게 사용하나요?
 
-Web Browsing tool allows the agent to search on internet and give you answer for your questions. This basically gives LLM the ability to access internet.
+웹 브라우징 도구를 사용하면 에이전트가 인터넷을 검색하고 질문에 대한 답변을 제공할 수 있습니다. 기본적으로 LLM에 인터넷에 접근할 수 있는 기능을 제공합니다.
 
-Example: `@agent can you do a web search for "What is the issue going on with MKBHD and Humane AI Pin?" and give me the key information that I need to know`
+예시: `@agent "MKBHD와 Humane AI Pin의 문제는 무엇인가요?"에 대해 웹 검색을 수행하고 내가 알아야 할 주요 정보를 제공해줄 수 있나요?`
 
 <Image
   src="/images/guides/ai-agents/browsing.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents Web Browsing"
+  alt="TeamplGPT AI Agents Web Browsing"
 />
 
-## What is Web Scraping and how to use it?
+## 웹 스크래핑이란 무엇이며 어떻게 사용하나요?
 
-Web Scraping tool allows the agent to scrape a website and give you answer for your questions. This embeds a website's content into the workspace and asking question to the LLM to respond based on the content on the embedded website, with agent you don't have to manually embed the website -- the agent will do it automatically for you.
+웹 스크래핑 도구를 사용하면 에이전트가 웹사이트를 스크래핑하여 질문에 대한 답변을 제공할 수 있습니다. 이는 웹사이트의 내용을 작업 공간에 포함시키고 LLM에게 포함된 웹사이트의 내용을 기반으로 응답하도록 요청합니다. 에이전트를 사용하면 수동으로 웹사이트를 포함시킬 필요가 없습니다. 에이전트가 자동으로 이를 수행합니다.
 
-Example: `@agent can you scrape the website useanything.com and give me a summary of features AnythingLLM have?`
+예시: `@agent useanything.com 웹사이트를 스크래핑하여 TeamplGPT의 기능 요약을 제공해줄 수 있나요?`
 
 <Image
   src="/images/guides/ai-agents/scrape.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents Web Scraping"
+  alt="TeamplGPT AI Agents Web Scraping"
 />
 
-## What is Save Files and how to use it?
+## 파일 저장이란 무엇이며 어떻게 사용하나요?
 
-Save Files tool allows the agent to save any information into a file on your local machine.
+파일 저장 도구를 사용하면 에이전트가 정보를 로컬 머신의 파일에 저장할 수 있습니다.
 
-Example: `@agent can save this information as a PDF on my desktop folder?`
+예시: `@agent 이 정보를 PDF로 내 바탕화면 폴더에 저장해줄 수 있나요?`
 
 <Image
   src="/images/guides/ai-agents/saving.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents Save Files"
+  alt="TeamplGPT AI Agents Save Files"
 />
 
 <Callout type="info" emoji="️💡">
-  **Note**
+  **참고**
 
-    AnythingLLM will show you an popup to choose the file location and file name to save the file.
+    TeamplGPT는 파일을 저장할 위치와 파일 이름을 선택할 수 있는 팝업을 표시합니다.
 
 </Callout>
 
-## What is List Documents and how to use it?
+## 문서 목록이란 무엇이며 어떻게 사용하나요?
 
-List Documents tool allows the agent to see and tell you all the documents it can access (documents that are embedded in the workspace)
+문서 목록 도구를 사용하면 에이전트가 접근할 수 있는 모든 문서(작업 공간에 포함된 문서)를 볼 수 있습니다.
 
-Example: `@agent could you please tell me the list of files you can access now?`
+예시: `@agent 지금 접근할 수 있는 파일 목록을 알려줄 수 있나요?`
 
 <Image
   src="/images/guides/ai-agents/list-document.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents List Documents"
+  alt="TeamplGPT AI Agents List Documents"
 />
 
-## What is Summarize Documents and how to use it?
+## 문서 요약이란 무엇이며 어떻게 사용하나요?
 
-Summarize Documents tool allows the agent to give you a summary of a document.
+문서 요약 도구를 사용하면 에이전트가 문서의 요약을 제공할 수 있습니다.
 
-Example: `@agent can you summarize the content on https://docs.useanything.com/features/chat-logs`
+예시: `@agent https://docs.useanything.com/features/chat-logs의 내용을 요약해줄 수 있나요?`
 
 <Image
   src="/images/guides/ai-agents/summarize.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents Summarize Documents"
+  alt="TeamplGPT AI Agents Summarize Documents"
 />
 
-## What is Chart Generation and how to use it?
+## 차트 생성이란 무엇이며 어떻게 사용하나요?
 
-Chart Generation tool allows the agent to create charts based on the given prompt/data.
+차트 생성 도구를 사용하면 주어진 프롬프트/데이터를 기반으로 차트를 생성할 수 있습니다.
 
-Example 1: `@agent can you plot y=mx+b where m=10 and b=0?`
+예시 1: `@agent y=mx+b를 그래프로 그릴 수 있나요? 여기서 m=10, b=0입니다.`
 
-Example 2: `@agent can you look at data.csv and plot that as a pie chat by age?` (_assuming data.csv is in the workspace_)
+예시 2: `@agent data.csv를 보고 나이별로 파이 차트를 만들어줄 수 있나요?` (_data.csv가 작업 공간에 있다고 가정_)
 
 <Image
   src="/images/guides/ai-agents/graph.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents Chart Generation"
+  alt="TeamplGPT AI Agents Chart Generation"
 />
 
-## What is SQL Agent and how to use it?
+## SQL 에이전트란 무엇이며 어떻게 사용하나요?
 
-The built-in SQL agent is a skill that you can leverage to run real-time analytics and queries against a real relational database. The agent can do all of the following:
+내장된 SQL 에이전트는 실제 관계형 데이터베이스에 대한 실시간 분석 및 쿼리를 실행하는 데 사용할 수 있는 스킬입니다. 에이전트는 다음 작업을 수행할 수 있습니다:
 
-- `list-databases`: View its current connections and sources it can leverage.
-- `list-tables`: View all of the available tables within a database.
-- `check-table-schema`: Check the available columns of a table for types and possible value stores.
-- `query`: Run a valid SQL query on a database to product a set of `rows` that will later be used in your answer.
+- `list-databases`: 현재 연결 및 사용할 수 있는 소스를 확인합니다.
+- `list-tables`: 데이터베이스 내의 모든 사용 가능한 테이블을 봅니다.
+- `check-table-schema`: 테이블의 사용 가능한 열을 유형 및 가능한 값 저장소로 확인합니다.
+- `query`: 데이터베이스에서 유효한 SQL 쿼리를 실행하여 나중에 답변에 사용할 `rows` 세트를 생성합니다.
 
 <Callout type="warning" emoji="️🔧">
-  **Caution!**
+  **주의!**
 
-You should use the SQL agent with a <b>read-only</b> database user. While the agent is instructed to not provide anything other than SELECT statements, this does not prevent it from running other SQL commands that could modify your data!
+SQL 에이전트를 <b>읽기 전용</b> 데이터베이스 사용자와 함께 사용해야 합니다. 에이전트는 SELECT 문 외에는 제공하지 않도록 지시되었지만, 이는 데이터를 수정할 수 있는 다른 SQL 명령을 실행하지 못하게 하지는 않습니다!
 
 </Callout>
 
-_Example 1:_ <br/>
-`@agent can you summarize all of the sales volume for May 2024 in the backend-office DB?`
+_예시 1:_ <br/>
+`@agent 백오피스 DB에서 2024년 5월의 판매량을 요약해줄 수 있나요?`
 
-_Example 2:_ (_assuming you have the `save-file` skill enabled_)<br/>
-`@agent can you grab the emails of the most recent 10 customers and save that to customer.csv?`
+_예시 2:_ (_`save-file` 스킬이 활성화되어 있다고 가정_)<br/>
+`@agent 최근 10명의 고객의 이메일을 가져와 customer.csv에 저장해줄 수 있나요?`
 
 <Image
   src="/images/guides/ai-agents/sql-agent.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents SQL Agent skill"
+  alt="TeamplGPT AI Agents SQL Agent skill"
 />
 
-## Frequently Asked Questions
+## 자주 묻는 질문
 
-### 1) How can I know if the agent session is started or ended?
+### 1) 에이전트 세션이 시작되거나 종료되었는지 어떻게 알 수 있나요?
 
-When a Agent session is started you will see the log `Agent @agent invoked` on your chat.
+에이전트 세션이 시작되면 채팅에 `Agent @agent invoked` 로그가 표시됩니다.
 
-When a Agent session is ended you will see the log `Agent session completed` on your chat.
+에이전트 세션이 종료되면 채팅에 `Agent session completed` 로그가 표시됩니다.
 
 <Image
   src="/images/guides/ai-agents/start-end.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents"
+  alt="TeamplGPT AI Agents"
 />
 
-### 2) How can I end a Agent Session?
+### 2) 에이전트 세션을 어떻게 종료하나요?
 
-Simply use the slash command `/exit` to end a agent session
+에이전트 세션을 종료하려면 슬래시 명령 `/exit`을 사용하세요.
 
 <Image
   src="/images/guides/ai-agents/end-slash-command.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents"
+  alt="TeamplGPT AI Agents"
 />
 
-### 3) Do I have to always mention `@agent` to interact with the agent?
+### 3) 에이전트와 상호작용할 때 항상 `@agent`를 사용해야 하나요?
 
-No, you only have to use `@agent` to start an agent session, during the agent session you don't have to mention the agent by `@agent`, you can just keep chatting with the agent like you chat with an LLM.
+아니요, 에이전트 세션을 시작할 때만 `@agent`를 사용하면 됩니다. 에이전트 세션 중에는 `@agent`를 언급하지 않고도 일반 LLM과 채팅하듯이 계속 대화할 수 있습니다.
 
-### 4) My Agent says it cannot access the internet, what can I do?
+### 4) 에이전트가 인터넷에 접속할 수 없다고 하는데, 어떻게 해야 하나요?
 
-This is because of the LLM you are using, not all LLMs are great of even useable for `tool-calling`. With AnythingLLM we make every model possible to be used as an agent, but the strength of your model to comprehend the instruction and examples of tool calling is still reliant on the model itself. Smaller models with 4-Bit Quantization won't respond properly as an agent most times, but the very same model at 8Bit Quantization will give better response as an Agent -- same LLM but different quantization. If your agent is not responding properly then try using a higher quantization model or a larger model altoghether.
+이는 사용 중인 LLM 때문입니다. 모든 LLM이 `도구 호출`에 적합하거나 사용 가능한 것은 아닙니다. TeamplGPT에서는 모든 모델을 에이전트로 사용할 수 있게 하지만, 도구 호출의 명령과 예제를 이해하는 모델의 능력은 여전히 모델 자체에 의존합니다. 4비트 양자화 모델은 대부분의 경우 에이전트로 적절히 응답하지 않지만, 동일한 모델을 8비트 양자화로 사용하면 더 나은 응답을 제공합니다. 에이전트가 제대로 응답하지 않는다면 더 높은 양자화 모델 또는 더 큰 모델을 사용해 보세요.
 
-### 5) My Agent says it saved a file on my machine, but when I checked the location there is no file like the agent mentioned, what can I do?
+### 5) 에이전트가 내 컴퓨터에 파일을 저장했다고 했지만, 해당 위치에 파일이 없어요. 어떻게 해야 하나요?
 
-If you dont see `@agent is attempting to call save-file-to-browser` when you ask, it never really called the tool and just pretended it did, AKA: **Hallunicated**.
+`@agent가 save-file-to-browser 도구 호출을 시도하고 있습니다`라는 메시지가 표시되지 않으면 도구를 호출하지 않고 단지 그렇게 한 척한 것입니다, 즉 **환각**한 것입니다.
 
-To fix this issue you can do one of the following things:
+이 문제를 해결하려면 다음 방법 중 하나를 사용할 수 있습니다:
 
-- Be more explicit and say verbatim for it to call the specific tool `save-file-to-browser`
-- Use a better model that is more capable of tool calling.
+- 더 명확하게 특정 도구 `save-file-to-browser`를 호출하도록 명령합니다.
+- 도구 호출에 더 능숙한 더 나은 모델을 사용합니다.

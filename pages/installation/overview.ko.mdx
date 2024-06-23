@@ -1,6 +1,6 @@
 ---
-title: "Installation Overview"
-description: "AnythingLLM offers two main ways to use AnythingLLM. There are some distinct differences in functionality between each offering"
+title: "설치 개요"
+description: "TeamplGPT를 사용하는 두 가지 주요 방법이 있습니다. 각 방법의 기능에는 몇 가지 뚜렷한 차이점이 있습니다."
 ---
 
 import { Callout, Cards } from "nextra/components";
@@ -11,117 +11,117 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Installation"
+  alt="TeamplGPT Installation"
 />
 
-## Installation Overview
+## 설치 개요
 
-AnythingLLM is a "**single-player**" application you can install on any Mac, Windows, or Linux operating system and get local LLMs, RAG, and Agents with little to zero configuration and full privacy.
+TeamplGPT는 Mac, Windows 또는 Linux 운영 체제에서 설치할 수 있는 "**싱글 플레이어**" 애플리케이션으로, 최소한의 설정으로 로컬 LLM, RAG 및 에이전트를 사용할 수 있으며 완전한 개인정보 보호를 제공합니다.
 
-You can install AnythingLLM as a Desktop Application, Self Host it locally using Docker and Host it on cloud (aws, google cloud, railway etc..) using Docker
+TeamplGPT는 데스크탑 애플리케이션으로 설치하거나, Docker를 사용하여 로컬에서 자체 호스팅하거나, 클라우드(AWS, 구글 클라우드, Railway 등)를 사용하여 호스팅할 수 있습니다.
 
-## Docker vs Desktop Version
+## Docker vs 데스크탑 버전
 
-AnythingLLM offers two main ways to use AnythingLLM. There are some distinct differences in functionality between each offering. Both are open source.
+TeamplGPT는 두 가지 주요 사용 방법을 제공합니다. 각 방법의 기능에는 몇 가지 뚜렷한 차이점이 있습니다. 두 방법 모두 오픈 소스입니다.
 
-### You want AnythingLLM Desktop if...
+### TeamplGPT 데스크탑이 필요한 경우...
 
-- You want a one-click installable app to use local LLMs, RAG, and Agents locally
-- You do not need multi-user support
-- Everything needs to stay only on your device
-- You do not need to "publish" anything to the public internet. Eg: Chat widget for website
+- 로컬에서 로컬 LLM, RAG 및 에이전트를 사용할 수 있는 원클릭 설치 앱이 필요할 때
+- 다중 사용자 지원이 필요하지 않을 때
+- 모든 것이 장치에만 있어야 할 때
+- 공개 인터넷에 아무 것도 "게시"할 필요가 없을 때 (예: 웹사이트용 채팅 위젯)
 
-### You want AnythingLLM Docker if...
+### TeamplGPT Docker가 필요한 경우...
 
-- You need an easy setup, but server-based service for AnythingLLM to use local LLMs, RAG, and Agents locally
-- You want to run an AnythingLLM instance that many people can use at the same time
-- You want to be able to share information with our users on your instance you invite
-- You need admin and rule-based access for workspaces and documents.
-- You will publish chat widgets to the public internet
-- You want to access AnythingLLM from the browser
+- 로컬 LLM, RAG 및 에이전트를 사용할 수 있는 서버 기반 서비스를 원할 때
+- 여러 사람이 동시에 사용할 수 있는 TeamplGPT 인스턴스를 실행하려 할 때
+- 초대된 사용자와 인스턴스에서 정보를 공유하려 할 때
+- 작업 공간 및 문서에 대한 관리자 및 규칙 기반 접근이 필요할 때
+- 공개 인터넷에 채팅 위젯을 게시하려 할 때
+- 브라우저에서 TeamplGPT에 접근하려 할 때
 
-The below table is a non-exhaustive list of features supported between platforms.
+아래 표는 플랫폼 간 지원되는 기능의 비포괄적인 목록입니다.
 
-| Feature                        | Available on Desktop | Available on Docker |
-| :----------------------------- | :------------------: | :-----------------: |
-| Multi-user support             |          ❌          |         ✅          |
-| Emeddable chat widgets         |          ❌          |         ✅          |
-| One-click install              |          ✅          |         ❌          |
-| Private documents              |          ✅          |         ✅          |
-| Connect to any vector database |          ✅          |         ✅          |
-| Use any LLM                    |          ✅          |         ✅          |
-| Built-in embedding provider    |          ✅          |         ✅          |
-| Built-in LLM provider          |          ✅          |         ❌          |
-| White-labeling                 |          ❌          |         ✅          |
-| Chat logs                      |          ✅          |         ✅          |
-| Agent support                  |          ✅          |         ✅          |
-| Agent skills                   |          ✅          |         ✅          |
-| Third-party data connectors    |          ✅          |         ✅          |
-| Password protection            |          ❌          |         ✅          |
-| Invite new users to instance   |          ❌          |         ✅          |
-| Text splitting configuration   |          ✅          |         ✅          |
-| Whisper model support          |          ✅          |         ✅          |
-| Full developer API             |          ✅          |         ✅          |
-| User management                |          ❌          |         ✅          |
-| Workspace access management    |          ❌          |         ✅          |
-| Website scraping               |          ✅          |         ✅          |
+| 기능                            | 데스크탑에서 사용 가능 | Docker에서 사용 가능 |
+| :------------------------------ | :-------------------: | :-----------------: |
+| 다중 사용자 지원                |          ❌           |         ✅          |
+| 임베디드 채팅 위젯              |          ❌           |         ✅          |
+| 원클릭 설치                     |          ✅           |         ❌          |
+| 개인 문서                       |          ✅           |         ✅          |
+| 모든 벡터 데이터베이스에 연결   |          ✅           |         ✅          |
+| 모든 LLM 사용                   |          ✅           |         ✅          |
+| 내장 임베딩 제공자              |          ✅           |         ✅          |
+| 내장 LLM 제공자                 |          ✅           |         ❌          |
+| 화이트 라벨링                   |          ❌           |         ✅          |
+| 채팅 로그                       |          ✅           |         ✅          |
+| 에이전트 지원                   |          ✅           |         ✅          |
+| 에이전트 기술                   |          ✅           |         ✅          |
+| 타사 데이터 커넥터              |          ✅           |         ✅          |
+| 비밀번호 보호                   |          ❌           |         ✅          |
+| 인스턴스에 새로운 사용자 초대   |          ❌           |         ✅          |
+| 텍스트 분할 구성                |          ✅           |         ✅          |
+| Whisper 모델 지원               |          ✅           |         ✅          |
+| 전체 개발자 API                 |          ✅           |         ✅          |
+| 사용자 관리                     |          ❌           |         ✅          |
+| 작업 공간 접근 관리             |          ❌           |         ✅          |
+| 웹사이트 스크래핑               |          ✅           |         ✅          |
 
 <Callout type="info" emoji="️💡">
-  **Tip:** AnythingLLM Desktop is the easiest way to use AnythingLLM.
+  **팁:** TeamplGPT 데스크탑은 TeamplGPT를 사용하는 가장 쉬운 방법입니다.
 </Callout>
 
 <br />
 
-## Quick Links
+## 빠른 링크
 
 <Cards>
-  <Card title="System Requirements" href="system-requirements"> 
+  <Card title="시스템 요구 사항" href="system-requirements"> 
     <Image
       src="/images/getting-started/installation/system-requirements.png" 
       height={1080} 
       width={1920} 
       quality={100}
-      alt="AnythingLLM System Requirements"
+      alt="TeamplGPT System Requirements"
     />
   </Card>
 
-<Card title="MacOS Install" href="desktop/macos">
+<Card title="MacOS 설치" href="desktop/macos">
   <Image
     src="/images/getting-started/installation/macos/header-image.png"
     height={1080}
     width={1920}
     quality={100}
-    alt="AnythingLLM MacOS Install"
+    alt="TeamplGPT MacOS Install"
   />
 </Card>
 
-<Card title="Windows Install" href="desktop/windows">
+<Card title="Windows 설치" href="desktop/windows">
   <Image
     src="/images/getting-started/installation/windows/header-image.png"
     height={1080}
     width={1920}
     quality={100}
-    alt="AnythingLLM Windows Install"
+    alt="TeamplGPT Windows Install"
   />
 </Card>
 
-<Card title="Linux Install" href="desktop/linux">
+<Card title="Linux 설치" href="desktop/linux">
   <Image
     src="/images/getting-started/installation/linux/header-image.png"
     height={1080}
     width={1920}
     quality={100}
-    alt="AnythingLLM Linux Install"
+    alt="TeamplGPT Linux Install"
   />
 </Card>
 
-<Card title="Local Docker Install" href="self-hosted/local-docker">
+<Card title="로컬 Docker 설치" href="self-hosted/local-docker">
   <Image
     src="/images/getting-started/installation/local-docker/header-image.png"
     height={1080}
     width={1920}
     quality={100}
-    alt="AnythingLLM Local Docker Install"
+    alt="TeamplGPT Local Docker Install"
   />
 </Card>
 
@@ -138,15 +138,15 @@ The below table is a non-exhaustive list of features supported between platforms
   />
 </Card>
 
-  <Card title="Cloud Docker Install" href="self-hosted/cloud-docker"> 
-    <Image
-      src="/images/getting-started/installation/cloud-docker/header-image.png" 
-      height={1080} 
-      width={1920} 
-      quality={100}
-      alt="AnythingLLM Cloud Docker Install"
-    />
-  </Card>  
+<Card title="클라우드 Docker 설치" href="self-hosted/cloud-docker"> 
+  <Image
+    src="/images/getting-started/installation/cloud-docker/header-image.png" 
+    height={1080} 
+    width={1920} 
+    quality={100}
+    alt="TeamplGPT Cloud Docker Install"
+  />
+</Card>  
 </Cards>
 
 export const Card = Object.assign(

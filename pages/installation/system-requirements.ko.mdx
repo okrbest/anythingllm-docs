@@ -1,6 +1,6 @@
 ---
-title: "System Requirements"
-description: "System Requirements to run AnythingLLM"
+title: "시스템 요구 사항"
+description: "TeamplGPT를 실행하기 위한 시스템 요구 사항"
 ---
 
 import { Callout } from "nextra/components";
@@ -11,49 +11,45 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM System Requirements"
+  alt="TeamplGPT System Requirements"
 />
 
-## System Requirements
+## 시스템 요구 사항
 
-AnythingLLM is fully customizable in every regard.
+TeamplGPT는 모든 면에서 완전히 사용자 정의할 수 있습니다.
 
-Given this customizable nature, your exact requirements to run AnythingLLM depend on many factors. You can use the tables below to get a rough idea of what it will take to run AnythingLLM.
+이러한 사용자 정의 특성으로 인해 TeamplGPT를 실행하기 위한 정확한 요구 사항은 여러 요소에 따라 다릅니다. 아래 표를 사용하여 TeamplGPT를 실행하는 데 필요한 대략적인 아이디어를 얻을 수 있습니다.
 
-AnythingLLM can be a wrapper around many external services that all accomplish some task - making AnythingLLM so lightweight it can run on the smallest machines - even Raspberry Pis!
+TeamplGPT는 많은 외부 서비스를 래핑할 수 있어 매우 가볍게 작동할 수 있으며, 심지어 Raspberry Pi와 같은 작은 장치에서도 실행할 수 있습니다!
 
-## Recommended configuration for AnythingLLM
+## TeamplGPT를 위한 권장 구성
 
-This is the minimum value for running AnythingLLM. This will be enough for you to store some documents, send chats, and use AnythingLLM features.
+이것은 TeamplGPT를 실행하기 위한 최소값입니다. 이를 통해 일부 문서를 저장하고, 채팅을 보내며, TeamplGPT 기능을 사용할 수 있습니다.
 
-| Property | Recommended Value |
-| -------- | ----------------- |
-| RAM      | 2GB               |
-| CPU      | 2-core CPU (any)  |
-| Storage  | 5GB               |
+| 속성   | 권장 값           |
+| ------ | ----------------- |
+| RAM    | 2GB               |
+| CPU    | 2코어 CPU (어떤 것이든)  |
+| 저장소 | 5GB               |
 
-## LLM selection impact
+## LLM 선택 영향
 
-This is how you get chat responses. Popular hosted solutions like [OpenAI](https://openai.com/) tend to provide state-of-the-art responses with almost **zero overhead**. However, you will need an API key for any cloud-based LLM provider.
-
-<Callout type="info" emoji="️💡">
-  **Tip:** Host a local LLM on another machine that has a GPU if the device
-  running AnythingLLM does not have a GPU. AnythingLLM can connect to any LLM
-  running anywhere via API.
-</Callout>
-
-## Embedder selection impact
-
-This is the model which you use to "**embed**" or vectorize text. Likewise, external services connected to AnythingLLM have **zero overhead** impact.
+이는 채팅 응답을 받는 방법입니다. [OpenAI](https://openai.com/)와 같은 인기 있는 호스팅 솔루션은 거의 **오버헤드 없이** 최첨단 응답을 제공하는 경향이 있습니다. 그러나 클라우드 기반 LLM 제공자를 사용하려면 API 키가 필요합니다.
 
 <Callout type="info" emoji="️💡">
-  **Tip:** Host a local embedder on another machine that has a GPU if the device
-  running AnythingLLM does not have a GPU. AnythingLLM can connect to to a
-  provider via API.
+  **팁:** TeamplGPT를 실행하는 장치에 GPU가 없는 경우 GPU가 있는 다른 장치에 로컬 LLM을 호스팅하세요. TeamplGPT는 API를 통해 어디에서나 실행 중인 LLM에 연결할 수 있습니다.
 </Callout>
 
-## Vector database selection impact
+## 임베더 선택 영향
 
-All supported vector databases either have no impact as they are externally hosted or can scale to hundreds of millions of vectors at the minimum recommended settings.
+이것은 텍스트를 "**임베드**" 또는 벡터화하는 데 사용하는 모델입니다. 마찬가지로 TeamplGPT에 연결된 외부 서비스는 **오버헤드 영향이 없습니다**.
 
-_the default LanceDB vector database can handle anything you can throw at it_
+<Callout type="info" emoji="️💡">
+  **팁:** TeamplGPT를 실행하는 장치에 GPU가 없는 경우 GPU가 있는 다른 장치에 로컬 임베더를 호스팅하세요. TeamplGPT는 API를 통해 제공자에 연결할 수 있습니다.
+</Callout>
+
+## 벡터 데이터베이스 선택 영향
+
+지원되는 모든 벡터 데이터베이스는 외부에서 호스팅되거나 최소 권장 설정에서 수억 개의 벡터로 확장할 수 있기 때문에 영향을 미치지 않습니다.
+
+_기본 LanceDB 벡터 데이터베이스는 어떤 작업도 처리할 수 있습니다._

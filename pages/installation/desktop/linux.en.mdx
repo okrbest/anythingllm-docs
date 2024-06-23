@@ -1,6 +1,6 @@
 ---
 title: "Linux Installation"
-description: "Linux Installation guide for AnythingLLM"
+description: "Linux Installation guide for TeamplGPT"
 ---
 
 import { Callout, Cards } from "nextra/components";
@@ -11,12 +11,12 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Installation"
+  alt="TeamplGPT Installation"
 />
 
 # Linux Installation
 
-There are **two** ways to install AnythingLLM on Windows
+There are **two** ways to install TeamplGPT on Windows
 
 **[1. Install using the Installation `.AppImage` file](#install-using-the-installation-file)**
 
@@ -25,17 +25,17 @@ There are **two** ways to install AnythingLLM on Windows
 <Callout type="warning" emoji="⚠️">
   **OPERATING SYSTEM NOTICE**
 
-➤ AnythingLLM is built on an Ubuntu system and may not work well on other distros.
+➤ TeamplGPT is built on an Ubuntu system and may not work well on other distros.
 
 ➤ Please open a [Github Issue](https://github.com/Mintplex-Labs/anything-llm/issues) if you have installation or bootup troubles.
 
-➤ We want to have Linux OS's to have the same experience with AnythingLLM.
+➤ We want to have Linux OS's to have the same experience with TeamplGPT.
 
 </Callout>
 
 ## Downloading the installation file
 
-Here is the download links for the latest version of Anything LLM Linux.
+Here is the download links for the latest version of TeamplGPT Linux.
 
 <Cards>
   <Card
@@ -57,7 +57,7 @@ export const Card = Object.assign(
   }
 );
 
-Your internet browser may need you to verify you want to download and run the AnythingLLM Desktop app since it may be marked as "untrusted" depending on your browser security settings.
+Your internet browser may need you to verify you want to download and run the TeamplGPT Desktop app since it may be marked as "untrusted" depending on your browser security settings.
 
 Click "**Keep**" when downloading to allow the file to download.
 
@@ -66,12 +66,12 @@ Click "**Keep**" when downloading to allow the file to download.
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Linux Install Browser Warning"
+  alt="TeamplGPT Linux Install Browser Warning"
 />
 
 ## Installing the application
 
-After downloading the Linux `.AppImage` for AnythingLLM, you may need to give the file executable permissions so that it can run.
+After downloading the Linux `.AppImage` for TeamplGPT, you may need to give the file executable permissions so that it can run.
 
 ```shell copy "
  chmod a+x /Downloads/AnythingLLMDesktop.AppImage
@@ -97,7 +97,7 @@ Run this command on your terminal
  docker pull mintplexlabs/anythingllm
 ```
 
-It will pull in the latest AnythingLLM image from docker.
+It will pull in the latest TeamplGPT image from docker.
 
 Once you have pulled the latest image, run the following commands
 
@@ -113,8 +113,8 @@ Once you have pulled the latest image, run the following commands
  mintplexlabs/anythingllm
 ```
 
-The above command will mount the storage locally and run AnythingLLM in Docker
+The above command will mount the storage locally and run TeamplGPT in Docker
 
-Now go to `http://localhost:3001` on your browser and you are now using AnythingLLM!
+Now go to `http://localhost:3001` on your browser and you are now using TeamplGPT!
 
 All your data and progress will persist between container rebuilds or pulls from Docker Hub.

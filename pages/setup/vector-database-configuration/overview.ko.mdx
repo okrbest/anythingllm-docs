@@ -1,6 +1,6 @@
 ---
-title: "Vector Databases"
-description: "Your vector database is set system-wide and cannot be configured atomically per-workspace like LLMs can.."
+title: "벡터 데이터베이스"
+description: "벡터 데이터베이스는 시스템 전체에서 설정되며, LLM처럼 작업 공간별로 원자적으로 구성할 수 없습니다."
 ---
 
 import { Cards, Callout } from "nextra/components";
@@ -11,30 +11,29 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Vector Databases"
+  alt="TeamplGPT Vector Databases"
 />
 
-# Vector Databases
+# 벡터 데이터베이스
 
-Your vector database is set system-wide and cannot be configured atomically per-workspace like LLMs can.
+벡터 데이터베이스는 시스템 전체에서 설정되며, LLM처럼 작업 공간별로 원자적으로 구성할 수 없습니다.
 
 <Callout type="error" emoji="️‼️">
-  **Caution!**
+  **주의!**
 
-    You should prevent "hopping" between vector databases. AnythingLLM will not automatically port over your already embedded information.
+  벡터 데이터베이스 간 "이동"을 방지해야 합니다. TeamplGPT는 이미 내장된 정보를 자동으로 옮기지 않습니다.
 
-    You would need to delete and re-embed each document in every workspace to migrate to another vector database.
-
+  다른 벡터 데이터베이스로 마이그레이션하려면 각 작업 공간에서 모든 문서를 삭제하고 다시 임베딩해야 합니다.
 </Callout>
 
-AnythingLLM supports many vector databases providers out of the box.
+TeamplGPT는 많은 벡터 데이터베이스 제공자를 기본적으로 지원합니다.
 
-## Supported Vector Databases
+## 지원되는 벡터 데이터베이스
 
-### Local Vector Databases Providers
+### 로컬 벡터 데이터베이스 제공자
 
 <Cards>
-  <Card title="LanceDB (Built-in)" href="local/lancedb"> 
+  <Card title="LanceDB (내장)" href="local/lancedb"> 
     <Image
       src="/images/features/vector-databases/lancedb.png" 
       height={1080} 
@@ -65,7 +64,7 @@ AnythingLLM supports many vector databases providers out of the box.
   </Card>
 </Cards>
 
-### Cloud Vector Databases Providers
+### 클라우드 벡터 데이터베이스 제공자
 
 <Cards>
   <Card title="Pinecone" href="cloud/pinecone"> 
@@ -120,7 +119,7 @@ AnythingLLM supports many vector databases providers out of the box.
 </Cards>
 
 export const Card = Object.assign(
-  // Copy card component and add default props
+  // 카드 컴포넌트를 복사하고 기본 속성 추가
   Cards.Card.bind(),
   {
     displayName: "Card",

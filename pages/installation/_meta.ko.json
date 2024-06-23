@@ -1,6 +1,6 @@
 {
   "overview": {
-    "title": "Installation Overview",
+    "title": "설치 개요",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -9,7 +9,7 @@
     }
   },
   "system-requirements": {
-    "title": "System Requirements",
+    "title": "시스템 요구 사항",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -18,7 +18,7 @@
     }
   },
   "desktop": {
-    "title": "Desktop Install",
+    "title": "데스크탑 설치",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -27,7 +27,7 @@
     }
   },
   "self-hosted": {
-    "title": "Self-Hosted Install",
+    "title": "자체 호스팅 설치",
     "theme": {
       "breadcrumb": true,
       "footer": true,

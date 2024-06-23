@@ -1,6 +1,6 @@
 ---
-title: "MacOS Installation"
-description: "MacOS Installation guide for AnythingLLM"
+title: "MacOS 설치"
+description: "TeamplGPT의 MacOS 설치 가이드"
 ---
 
 import { Callout, Cards } from "nextra/components";
@@ -11,55 +11,54 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Installation"
+  alt="TeamplGPT Installation"
 />
 
-# MacOS Installation
+# MacOS 설치
 
-There are **three** ways to install AnythingLLM on MacOS
+MacOS에 TeamplGPT를 설치하는 방법은 **세 가지**가 있습니다.
 
-**[1. Install using the Installation `.dmg` file](#install-using-the-installation-file)**
+**[1. 설치 `.dmg` 파일을 사용하여 설치](#install-using-the-installation-file)**
 
-**[2. Install using Homebrew](#install-using-homebrew)**
+**[2. Homebrew를 사용하여 설치](#install-using-homebrew)**
 
-**[3. Install using Docker](#install-using-docker)**
+**[3. Docker를 사용하여 설치](#install-using-docker)**
 
-## Install using the installation file
+## 설치 파일을 사용하여 설치
 
 <Callout type="warning" emoji="⚠️">
-  **Install the right dmg!**
+  **올바른 dmg를 설치하세요!**
 
-➤ Make sure you downloaded the correct `dmg` for your device! We support both types of chips found in MacOS devices.
+➤ 장치에 맞는 올바른 `dmg` 파일을 다운로드했는지 확인하세요! MacOS 장치에서 발견되는 두 종류의 칩을 모두 지원합니다.
 
-➤ Apple Silicon devices (M1/M2/M3) - `AnythingLLMDesktop-AppleSilicon.dmg`
+➤ Apple Silicon 장치 (M1/M2/M3) - `TeamplGPTDesktop-AppleSilicon.dmg`
 
-➤ Apple (Intel) - `AnythingLLMDesktop.dmg`
+➤ Apple (Intel) - `TeamplGPTDesktop.dmg`
 
 </Callout>
 
 <Callout type="info" emoji="️💡">
-  **PERFORMANCE** ➤➤ Apple M-Series chips run local LLM inferencing
-  **considerably** faster than Intel-based Mac.
+  **성능** ➤➤ Apple M 시리즈 칩은 Intel 기반 Mac보다 로컬 LLM 추론을 **상당히** 빠르게 실행합니다.
 </Callout>
 
-### Downloading the installation file
+### 설치 파일 다운로드
 
-Here is the download links for the latest version of Anything LLM MacOS.
+여기에서 최신 버전의 TeamplGPT MacOS를 다운로드할 수 있습니다.
 
 <Cards>
   <Card 
-    title="MacOS (Intel-based CPU)" 
-    href="https://s3.us-west-1.amazonaws.com/public.useanything.com/latest/AnythingLLMDesktop.dmg"> 
+    title="MacOS (Intel 기반 CPU)" 
+    href="https://s3.us-west-1.amazonaws.com/public.useanything.com/latest/TeamplGPTDesktop.dmg"> 
   </Card>
 
   <Card 
-    title="MacOS (M-Series CPU)" 
-    href="https://s3.us-west-1.amazonaws.com/public.useanything.com/latest/AnythingLLMDesktop-Silicon.dmg"> 
+    title="MacOS (M 시리즈 CPU)" 
+    href="https://s3.us-west-1.amazonaws.com/public.useanything.com/latest/TeamplGPTDesktop-Silicon.dmg"> 
   </Card>
 </Cards>
 
 export const Card = Object.assign(
-  // Copy card component and add default props
+  // 카드 구성 요소를 복사하고 기본 속성 추가
   Cards.Card.bind(),
   {
     displayName: "Card",
@@ -71,63 +70,63 @@ export const Card = Object.assign(
   }
 );
 
-Your internet browser may need you to verify you want to download and run the AnythingLLM Desktop app since it may be marked as "untrusted" depending on your browser security settings.
+인터넷 브라우저는 보안 설정에 따라 TeamplGPT 데스크탑 앱을 다운로드하고 실행할 것인지 확인할 수 있습니다.
 
-Click "**Keep**" when downloading to allow the file to download.
+다운로드를 허용하려면 "**유지**"를 클릭하세요.
 
 <Image
   src="/images/getting-started/installation/macos/browser-warning.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Mac Install Browser Warning"
+  alt="TeamplGPT Mac Install Browser Warning"
 />
 
-### Installing the application
+### 애플리케이션 설치
 
-After downloading the `.dmg` file from the link in the invitation email, you will want to double-click on the resulting installed file.
+초대 이메일의 링크에서 `.dmg` 파일을 다운로드한 후, 설치된 파일을 더블 클릭합니다.
 
-Once the dmg opens, you can drag the AnythingLLM logo into `Applications`
+dmg 파일이 열리면 TeamplGPT 로고를 `응용 프로그램`으로 드래그할 수 있습니다.
 
 <Image
   src="/images/getting-started/installation/macos/install.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Mac Installation"
+  alt="TeamplGPT Mac Installation"
 />
 
-Once installed, you will find AnythingLLM in your Applications folder as well as you can use `cmd + spacebar` and type in AnythingLLM to run.
+설치 후 응용 프로그램 폴더에서 TeamplGPT를 찾을 수 있으며 `cmd + spacebar`를 사용하고 TeamplGPT를 입력하여 실행할 수 있습니다.
 
 ---
 
-## Install using Homebrew
+## Homebrew를 사용하여 설치
 
-Make sure you have installed [Homebrew](https://brew.sh/) on your machine, if you don't have Homebrew installed then you can install it by following this [guide](https://mac.install.guide/homebrew/3)
+[Homebrew](https://brew.sh/)가 장치에 설치되어 있는지 확인하세요. Homebrew가 설치되어 있지 않다면 이 [가이드](https://mac.install.guide/homebrew/3)를 따라 설치할 수 있습니다.
 
-Run the following command on your terminal
+터미널에서 다음 명령어를 실행하세요.
 
 ```shell copy
  brew install --cask anythingllm
 ```
 
-Once installed, you will find AnythingLLM in your Applications folder as well as you can use `cmd + spacebar` and type in AnythingLLM to run.
+설치 후 응용 프로그램 폴더에서 TeamplGPT를 찾을 수 있으며 `cmd + spacebar`를 사용하고 TeamplGPT를 입력하여 실행할 수 있습니다.
 
 ---
 
-## Install using Docker
+## Docker를 사용하여 설치
 
-Make sure you have installed [Docker](https://www.docker.com/) on your machine, if you don't have Docker installed then you can install it by following this [guide](https://docs.docker.com/desktop/install/mac-install)
+[Docker](https://www.docker.com/)가 장치에 설치되어 있는지 확인하세요. Docker가 설치되어 있지 않다면 이 [가이드](https://docs.docker.com/desktop/install/mac-install)를 따라 설치할 수 있습니다.
 
-Run this command on your terminal
+터미널에서 다음 명령어를 실행하세요.
 
 ```shell copy
  docker pull mintplexlabs/anythingllm
 ```
 
-It will pull in the latest AnythingLLM image from docker.
+이 명령어는 Docker에서 최신 TeamplGPT 이미지를 가져옵니다.
 
-Once you have pulled the latest image, run the following commands
+최신 이미지를 가져온 후, 다음 명령어를 실행하세요.
 
 ```shell copy showLineNumbers
  export STORAGE_LOCATION=$HOME/anythingllm && \
@@ -141,8 +140,8 @@ Once you have pulled the latest image, run the following commands
  mintplexlabs/anythingllm
 ```
 
-The above command will mount the storage locally and run AnythingLLM in Docker
+위 명령어는 로컬 저장소를 마운트하고 Docker에서 TeamplGPT를 실행합니다.
 
-Now go to `http://localhost:3001` on your browser and you are now using AnythingLLM!
+이제 브라우저에서 `http://localhost:3001`로 이동하면 TeamplGPT를 사용할 수 있습니다!
 
-All your data and progress will persist between container rebuilds or pulls from Docker Hub.
+모든 데이터와 진행 상황은 컨테이너 재빌드 또는 Docker Hub에서 가져오기 간에 지속됩니다.

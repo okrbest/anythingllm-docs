@@ -1,6 +1,6 @@
 {
   "embedder-configuration": {
-    "title": "Embedder Setup",
+    "title": "임베더 설정",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -9,7 +9,7 @@
     }
   },
   "llm-configuration": {
-    "title": "LLM Setup",
+    "title": "LLM 설정",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -18,7 +18,7 @@
     }
   },
   "transcription-model-configuration": {
-    "title": "Transcription Setup",
+    "title": "음성 인식 설정",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -27,7 +27,7 @@
     }
   },
   "vector-database-configuration": {
-    "title": "Vector DB Setup",
+    "title": "벡터 DB 설정",
     "theme": {
       "breadcrumb": true,
       "footer": true,

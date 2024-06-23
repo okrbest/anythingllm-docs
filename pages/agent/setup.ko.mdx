@@ -1,6 +1,6 @@
 ---
-title: "AI Agent Setup"
-description: "This guide explain how to setup AI Agents on AnythingLLM"
+title: "AI 에이전트 설정"
+description: "TeamplGPT에서 AI 에이전트를 설정하는 방법에 대한 가이드입니다."
 ---
 
 import { Callout } from "nextra/components";
@@ -11,84 +11,84 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM AI Agents"
+  alt="TeamplGPT AI Agents"
 />
 
-# Setting up AI Agents
+# AI 에이전트 설정
 
-### 1) Go to Agent configuration
+### 1) 에이전트 구성 메뉴로 이동
 
-Open the workspace settings and go to the agent configuration menu
+작업 공간 설정을 열고 에이전트 구성 메뉴로 이동합니다.
 
 <Image
   src="/images/anythingllm-setup/agent-configuration/configuration-menu.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Agent Configuration Menu"
+  alt="TeamplGPT Agent Configuration Menu"
 />
 
-### 2) Choose the LLM for your Agent
+### 2) 에이전트의 LLM 선택
 
-On workspace settings, select your LLM Provider and the Model you want your Agent to use. Be sure to click the "Update workspace agent" button or your settings will not be saved.
+작업 공간 설정에서 에이전트가 사용할 LLM 제공자와 모델을 선택합니다. "작업 공간 에이전트 업데이트" 버튼을 클릭하지 않으면 설정이 저장되지 않습니다.
 
 <Image
   src="/images/anythingllm-setup/agent-configuration/llm.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Agent LLM"
+  alt="TeamplGPT Agent LLM"
 />
 
-After updating the workspace agent settings, click the "Configure Agent Skills" button.
+작업 공간 에이전트 설정을 업데이트한 후 "에이전트 스킬 구성" 버튼을 클릭합니다.
 
 <Image
   src="/images/anythingllm-setup/agent-configuration/configure-agent-skills-button.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Agent LLM"
+  alt="TeamplGPT Configure Agent Skills"
 />
 
 <Callout type="error" emoji="️⚠️">
-  **Caution**
+  **주의**
 
-    Not all LLM Models works well as Agents, you may need to use higher quantization models for better responses.
-    Example: `Llama 3 8B 8Bit Quantization` gives better responses as an Agent
+    모든 LLM 모델이 에이전트로 잘 작동하는 것은 아닙니다. 더 나은 응답을 위해서는 높은 양자화 모델을 사용할 필요가 있습니다.
+    예: `Llama 3 8B 8Bit Quantization`은 에이전트로서 더 나은 응답을 제공합니다.
 
 </Callout>
 
 <Callout type="info" emoji="️ℹ️">
-  **Note**
+  **참고**
 
-    AnythingLLM supports a lot of LLM providers for use with `@agent`s and you can see all the supported LLMs from [here](https://docs.useanything.com/features/language-models#supported-language-model-providers)
+    TeamplGPT는 `@agent`와 함께 사용할 수 있는 많은 LLM 제공자를 지원하며, 지원되는 모든 LLM은 [여기](https://docs.useanything.com/features/language-models#supported-language-model-providers)에서 확인할 수 있습니다.
 
 </Callout>
 
-### 3) Choose your Agent skills
+### 3) 에이전트 스킬 선택
 
-Choose the skills, or tools, for your Agent to use. The skills labled "Default" are default skills that cannot be disabled.
+에이전트가 사용할 스킬 또는 도구를 선택합니다. "기본"으로 표시된 스킬은 비활성화할 수 없는 기본 스킬입니다.
 
 <Image
   src="/images/anythingllm-setup/agent-configuration/tools.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Agent Skills"
+  alt="TeamplGPT Agent Skills"
 />
 
 <Callout type="info" emoji="️ℹ️">
-  **Note**
+  **참고**
 
-    Some tools like `RAG`, `Summarize Documents` and `Scrape Websites` are enabled by default and you cannot disable them.
+    `RAG`, `Summarize Documents` 및 `Scrape Websites`와 같은 일부 도구는 기본적으로 활성화되어 있으며 비활성화할 수 없습니다.
 
 </Callout>
 
-### 4) Choose your Search Provider (Optional)
+### 4) 검색 제공자 선택 (선택 사항)
 
-One of the tools agents can use is `Web-Browsing` which allows agents to browse the internet.
+에이전트가 사용할 수 있는 도구 중 하나는 인터넷을 검색할 수 있는 `Web-Browsing`입니다.
 
-Currently we support the following search providers:
+현재 다음 검색 제공자를 지원합니다:
 
 - [Google](https://www.google.com/)
 - [Serper](https://serper.dev/)
@@ -96,9 +96,9 @@ Currently we support the following search providers:
 - [Serply](https://serply.io/)
 
 <Callout type="info" emoji="️ℹ️">
-  **Note**
+  **참고**
 
-    You can ignore this step if you don't plan to use the `Web-Browsing` tool
+    `Web-Browsing` 도구를 사용할 계획이 없다면 이 단계를 무시해도 됩니다.
 
 </Callout>
 
@@ -107,14 +107,14 @@ Currently we support the following search providers:
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Agent Web Browsing"
+  alt="TeamplGPT Agent Web Browsing"
 />
 
-With Google Search Engine you can perform up to 100 search for free everyday.
+Google 검색 엔진을 사용하면 매일 최대 100회 무료 검색을 수행할 수 있습니다.
 
-**That's it! You can now use AnythingLLM's Agents!**
+**이제 TeamplGPT의 에이전트를 사용할 수 있습니다!**
 
-If you want to learn how to use AI Agents then you can read our [AI Agent Guide](/agent/usage) or watch the below video:
+AI 에이전트를 사용하는 방법을 배우고 싶다면 [AI 에이전트 가이드](/agent/usage)를 읽거나 아래 동영상을 시청하세요:
 
 <br />
 

@@ -1,6 +1,6 @@
 {
   "overview": {
-    "title": "Overview",
+    "title": "개요",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -9,7 +9,7 @@
     }
   },
   "setup": {
-    "title": "Setup",
+    "title": "설정",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -18,7 +18,7 @@
     }
   },
   "usage": {
-    "title": "Usage",
+    "title": "사용법",
     "theme": {
       "breadcrumb": true,
       "footer": true,

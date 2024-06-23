@@ -1,6 +1,6 @@
 ---
-title: "Linux Installation"
-description: "Linux Installation guide for AnythingLLM"
+title: "Linux 설치"
+description: "TeamplGPT의 Linux 설치 가이드"
 ---
 
 import { Callout, Cards } from "nextra/components";
@@ -11,41 +11,41 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Installation"
+  alt="TeamplGPT Installation"
 />
 
-# Linux Installation
+# Linux 설치
 
-There are **two** ways to install AnythingLLM on Windows
+Linux에 TeamplGPT를 설치하는 방법은 **두 가지**가 있습니다.
 
-**[1. Install using the Installation `.AppImage` file](#install-using-the-installation-file)**
+**[1. 설치 `.AppImage` 파일을 사용하여 설치](#install-using-the-installation-file)**
 
-**[2. Install using Docker](#install-using-docker)**
+**[2. Docker를 사용하여 설치](#install-using-docker)**
 
 <Callout type="warning" emoji="⚠️">
-  **OPERATING SYSTEM NOTICE**
+  **운영 체제 공지**
 
-➤ AnythingLLM is built on an Ubuntu system and may not work well on other distros.
+➤ TeamplGPT는 Ubuntu 시스템에서 빌드되었으며 다른 배포판에서는 잘 작동하지 않을 수 있습니다.
 
-➤ Please open a [Github Issue](https://github.com/Mintplex-Labs/anything-llm/issues) if you have installation or bootup troubles.
+➤ 설치 또는 부팅 문제 발생 시 [Github Issue](https://github.com/Mintplex-Labs/anything-llm/issues)를 열어주세요.
 
-➤ We want to have Linux OS's to have the same experience with AnythingLLM.
+➤ 모든 Linux OS에서 TeamplGPT와 동일한 경험을 제공하고자 합니다.
 
 </Callout>
 
-## Downloading the installation file
+## 설치 파일 다운로드
 
-Here is the download links for the latest version of Anything LLM Linux.
+여기에서 최신 버전의 TeamplGPT Linux를 다운로드할 수 있습니다.
 
 <Cards>
   <Card
     title="Linux (generic) x86"
-    href="https://s3.us-west-1.amazonaws.com/public.useanything.com/latest/AnythingLLMDesktop.AppImage"
+    href="https://s3.us-west-1.amazonaws.com/public.useanything.com/latest/TeamplGPTDesktop.AppImage"
   ></Card>
 </Cards>
 
 export const Card = Object.assign(
-  // Copy card component and add default props
+  // 카드 구성 요소를 복사하고 기본 속성 추가
   Cards.Card.bind(),
   {
     displayName: "Card",
@@ -57,27 +57,27 @@ export const Card = Object.assign(
   }
 );
 
-Your internet browser may need you to verify you want to download and run the AnythingLLM Desktop app since it may be marked as "untrusted" depending on your browser security settings.
+인터넷 브라우저는 보안 설정에 따라 TeamplGPT 데스크탑 앱을 다운로드하고 실행할 것인지 확인할 수 있습니다.
 
-Click "**Keep**" when downloading to allow the file to download.
+다운로드를 허용하려면 "**유지**"를 클릭하세요.
 
 <Image
   src="/images/getting-started/installation/linux/browser-warning.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Linux Install Browser Warning"
+  alt="TeamplGPT Linux Install Browser Warning"
 />
 
-## Installing the application
+## 애플리케이션 설치
 
-After downloading the Linux `.AppImage` for AnythingLLM, you may need to give the file executable permissions so that it can run.
+Linux용 TeamplGPT `.AppImage`를 다운로드한 후 파일에 실행 권한을 부여해야 실행할 수 있습니다.
 
 ```shell copy "
  chmod a+x /Downloads/AnythingLLMDesktop.AppImage
 ```
 
-After that, you can boot the AppImage like any other app image. Double-clicking or running via the terminal will boot the full application.
+그 후, 다른 앱 이미지처럼 AppImage를 부팅할 수 있습니다. 더블 클릭하거나 터미널을 통해 실행하면 전체 애플리케이션이 부팅됩니다.
 
 ```shell copy showLineNumbers"
 # Assuming we are running the AppImage from the /Downloads folder.
@@ -87,19 +87,19 @@ After that, you can boot the AppImage like any other app image. Double-clicking 
 
 ---
 
-## Install using Docker
+## Docker를 사용하여 설치
 
-Make sure you have installed [Docker](https://www.docker.com/) on your machine, if you don't have Docker installed then you can install it by following this [guide](https://docs.docker.com/desktop/install/linux-install/)
+[Docker](https://www.docker.com/)가 장치에 설치되어 있는지 확인하세요. Docker가 설치되어 있지 않다면 이 [가이드](https://docs.docker.com/desktop/install/linux-install/)를 따라 설치할 수 있습니다.
 
-Run this command on your terminal
+터미널에서 다음 명령어를 실행하세요.
 
 ```shell copy
  docker pull mintplexlabs/anythingllm
 ```
 
-It will pull in the latest AnythingLLM image from docker.
+이 명령어는 Docker에서 최신 TeamplGPT 이미지를 가져옵니다.
 
-Once you have pulled the latest image, run the following commands
+최신 이미지를 가져온 후, 다음 명령어를 실행하세요.
 
 ```shell copy showLineNumbers
  export STORAGE_LOCATION=$HOME/anythingllm && \
@@ -113,8 +113,8 @@ Once you have pulled the latest image, run the following commands
  mintplexlabs/anythingllm
 ```
 
-The above command will mount the storage locally and run AnythingLLM in Docker
+위 명령어는 로컬 저장소를 마운트하고 Docker에서 TeamplGPT를 실행합니다.
 
-Now go to `http://localhost:3001` on your browser and you are now using AnythingLLM!
+이제 브라우저에서 `http://localhost:3001`로 이동하면 TeamplGPT를 사용할 수 있습니다!
 
-All your data and progress will persist between container rebuilds or pulls from Docker Hub.
+모든 데이터와 진행 상황은 컨테이너 재빌드 또는 Docker Hub에서 가져오기 간에 지속됩니다.

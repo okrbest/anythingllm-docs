@@ -1,6 +1,6 @@
 {
   "built-in": {
-    "title": "AnythingLLM Default",
+    "title": "TeamplGPT 기본",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -9,7 +9,7 @@
     }
   },
   "lmstudio": {
-    "title": "LM Studio",
+    "title": "LM 스튜디오",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -18,7 +18,7 @@
     }
   },
   "localai": {
-    "title": "Local AI",
+    "title": "로컬 AI",
     "theme": {
       "breadcrumb": true,
       "footer": true,

@@ -1,6 +1,6 @@
 ---
-title: "Overview"
-description: "Large language models are AI systems capable of understanding and generating human language by processing vast amounts of text data."
+title: "개요"
+description: "대형 언어 모델은 방대한 양의 텍스트 데이터를 처리하여 인간 언어를 이해하고 생성할 수 있는 AI 시스템입니다."
 ---
 
 import { Cards } from "nextra/components";
@@ -11,81 +11,81 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="LLM Configuration"
+  alt="LLM 설정"
 />
 
-# Large Language Models
+# 대형 언어 모델
 
-Large language models are AI systems capable of understanding and generating human language by processing vast amounts of text data.
+대형 언어 모델은 방대한 양의 텍스트 데이터를 처리하여 인간 언어를 이해하고 생성할 수 있는 AI 시스템입니다.
 
-## Types of LLMs in AnythingLLM
+## TeamplGPT의 LLM 유형
 
-AnythingLLM allows you to get as specific or general as you want with your LLM selection. You can even have multiple LLMs configured at the same time all in the same application!
+TeamplGPT는 LLM을 구체적으로 또는 일반적으로 선택하여 설정할 수 있으며, 동일한 애플리케이션 내에서 여러 LLM을 동시에 구성할 수도 있습니다.
 
-### System LLM
+### 시스템 LLM
 
-This is the default LLM AnythingLLM will interface with. This is the LLM configuration that will be used when a workspace or agent-specific agent LLM has not been defined.
+시스템 LLM은 TeamplGPT가 기본적으로 사용하는 LLM입니다. 워크스페이스나 에이전트에 특정 LLM이 정의되지 않은 경우, 이 시스템 LLM이 사용됩니다.
 
-### Workspace LLM
+### 워크스페이스 LLM
 
-AnythingLLM allows you to set workspace-specific LLMs, this will override the system LLM **but only when chatting with the specific workspace**. This allows you to have many workspaces that each have their own provider, model, or both!
+TeamplGPT는 워크스페이스별로 특정 LLM을 설정할 수 있습니다. 이렇게 설정된 워크스페이스 LLM은 시스템 LLM을 재정의하지만, 이는 해당 워크스페이스와 채팅할 때만 적용됩니다. 이를 통해 각 워크스페이스마다 고유한 제공자, 모델 또는 둘 다를 사용할 수 있습니다.
 
-### Agent LLM
+### 에이전트 LLM
 
-AnythingLLM supports AI-agents. When it comes to agents, not all LLMs were created equal. Some LLMs directly support tool calling for better ai-agent functionality. The model is the model that is explicitly used for use with agents.
+TeamplGPT는 AI 에이전트를 지원합니다. 에이전트의 경우, 모든 LLM이 동일하게 만들어진 것은 아닙니다. 일부 LLM은 더 나은 AI 에이전트 기능을 위해 도구 호출을 직접 지원합니다. 이 모델은 에이전트와 함께 사용하기 위해 명시적으로 사용되는 모델입니다.
 
-## Supported LLM Providers
+## 지원되는 LLM 제공자
 
-AnythingLLM supports many LLMs out of the box with very little, if any setup.
+TeamplGPT는 최소한의 설정으로 여러 LLM을 기본적으로 지원합니다.
 
-The LLM is the foundational integration that will determine how your workspace or agents respond to your questions and prompts.
+LLM은 워크스페이스나 에이전트가 질문과 프롬프트에 어떻게 응답하는지를 결정하는 기본 통합입니다.
 
-You can modify your LLM provider, model, or any other details at any time in AnythingLLM with no worry.
+TeamplGPT 내에서 언제든지 LLM 제공자, 모델 또는 기타 세부 사항을 수정할 수 있습니다.
 
-We allow you to connect to both local and cloud-based LLMs - even at the same time!
+로컬 및 클라우드 기반 LLM 모두에 연결할 수 있습니다 - 심지어 동시에!
 
-### Local Language Model Providers
+### 로컬 언어 모델 제공자
 
 <Cards>
-  <Card title="Built-in (default)" href="local/built-in"> 
+  <Card title="내장형 (기본값)" href="local/built-in"> 
     <Image
       src="/images/anythingllm-setup/llm-configuration/local/built-in/header-image.png" 
       height={1080} 
       width={1920} 
       quality={100}
-      alt="AnythingLLM Built-in (default)"
+      alt="TeamplGPT 내장형 (기본값)"
     />
   </Card>
 
-<Card title="Ollama" href="local/ollama">
-  <Image
-    src="/images/anythingllm-setup/llm-configuration/local/ollama/header-image.png"
-    height={1080}
-    width={1920}
-    quality={100}
-    alt="Ollama"
-  />
-</Card>
+  <Card title="Ollama" href="local/ollama">
+    <Image
+      src="/images/anythingllm-setup/llm-configuration/local/ollama/header-image.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="Ollama"
+    />
+  </Card>
 
-<Card title="LM Studio" href="local/lmstudio">
-  <Image
-    src="/images/anythingllm-setup/llm-configuration/local/lmstudio/header-image.png"
-    height={1080}
-    width={1920}
-    quality={100}
-    alt="LM Studio"
-  />
-</Card>
+  <Card title="LM Studio" href="local/lmstudio">
+    <Image
+      src="/images/anythingllm-setup/llm-configuration/local/lmstudio/header-image.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="LM Studio"
+    />
+  </Card>
 
-<Card title="Local AI" href="local/localai">
-  <Image
-    src="/images/anythingllm-setup/llm-configuration/local/localai/header-image.png"
-    height={1080}
-    width={1920}
-    quality={100}
-    alt="Local AI"
-  />
-</Card>
+  <Card title="Local AI" href="local/localai">
+    <Image
+      src="/images/anythingllm-setup/llm-configuration/local/localai/header-image.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="Local AI"
+    />
+  </Card>
 
   <Card title="KobaldCPP" href="local/kobaldcpp"> 
     <Image
@@ -98,7 +98,7 @@ We allow you to connect to both local and cloud-based LLMs - even at the same ti
   </Card> 
 </Cards>
 
-### Cloud Language Model Providers
+### 클라우드 언어 모델 제공자
 
 <Cards>
   <Card title="OpenAI" href="cloud/openai"> 
@@ -111,105 +111,105 @@ We allow you to connect to both local and cloud-based LLMs - even at the same ti
     />
   </Card>
 
-<Card title="Azure OpenAI" href="cloud/azure-openai">
-  <Image
-    src="/images/anythingllm-setup/llm-configuration/cloud/azure-openai/header-image.png"
-    height={1080}
-    width={1920}
-    quality={100}
-    alt="Azure OpenAI"
-  />
-</Card>
+  <Card title="Azure OpenAI" href="cloud/azure-openai">
+    <Image
+      src="/images/anythingllm-setup/llm-configuration/cloud/azure-openai/header-image.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="Azure OpenAI"
+    />
+  </Card>
 
-<Card title="Anthropic" href="cloud/anthropic">
-  <Image
-    src="/images/anythingllm-setup/llm-configuration/cloud/anthropic/header-image.png"
-    height={1080}
-    width={1920}
-    quality={100}
-    alt="Anthropic"
-  />
-</Card>
+  <Card title="Anthropic" href="cloud/anthropic">
+    <Image
+      src="/images/anythingllm-setup/llm-configuration/cloud/anthropic/header-image.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="Anthropic"
+    />
+  </Card>
 
-<Card title="Cohere" href="cloud/cohere">
-  <Image
-    src="/images/anythingllm-setup/llm-configuration/cloud/cohere/header-image.png"
-    height={1080}
-    width={1920}
-    quality={100}
-    alt="Cohere"
-  />
-</Card>
+  <Card title="Cohere" href="cloud/cohere">
+    <Image
+      src="/images/anythingllm-setup/llm-configuration/cloud/cohere/header-image.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="Cohere"
+    />
+  </Card>
 
-<Card title="Google Gemini Pro" href="cloud/google-gemini">
-  <Image
-    src="/images/anythingllm-setup/llm-configuration/cloud/google-gemini/header-image.png"
-    height={1080}
-    width={1920}
-    quality={100}
-    alt="Google Gemini Pro"
-  />
-</Card>
+  <Card title="Google Gemini Pro" href="cloud/google-gemini">
+    <Image
+      src="/images/anythingllm-setup/llm-configuration/cloud/google-gemini/header-image.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="Google Gemini Pro"
+    />
+  </Card>
 
-<Card title="Hugging Face" href="cloud/huggingface">
-  <Image
-    src="/images/anythingllm-setup/llm-configuration/cloud/hugging-face/header-image.png"
-    height={1080}
-    width={1920}
-    quality={100}
-    alt="Hugging Face"
-  />
-</Card>
+  <Card title="Hugging Face" href="cloud/huggingface">
+    <Image
+      src="/images/anythingllm-setup/llm-configuration/cloud/hugging-face/header-image.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="Hugging Face"
+    />
+  </Card>
 
-<Card title="Together AI" href="cloud/together-ai">
-  <Image
-    src="/images/anythingllm-setup/llm-configuration/cloud/together-ai/header-image.png"
-    height={1080}
-    width={1920}
-    quality={100}
-    alt="Together AI"
-  />
-</Card>
+  <Card title="Together AI" href="cloud/together-ai">
+    <Image
+      src="/images/anythingllm-setup/llm-configuration/cloud/together-ai/header-image.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="Together AI"
+    />
+  </Card>
 
-<Card title="OpenRouter" href="cloud/openrouter">
-  <Image
-    src="/images/anythingllm-setup/llm-configuration/cloud/openrouter/header-image.png"
-    height={1080}
-    width={1920}
-    quality={100}
-    alt="OpenRouter"
-  />
-</Card>
+  <Card title="OpenRouter" href="cloud/openrouter">
+    <Image
+      src="/images/anythingllm-setup/llm-configuration/cloud/openrouter/header-image.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="OpenRouter"
+    />
+  </Card>
 
-<Card title="Perplexity AI" href="cloud/perplexity-ai">
-  <Image
-    src="/images/anythingllm-setup/llm-configuration/cloud/perplexity-ai/header-image.png"
-    height={1080}
-    width={1920}
-    quality={100}
-    alt="Perplexity AI"
-  />
-</Card>
+  <Card title="Perplexity AI" href="cloud/perplexity-ai">
+    <Image
+      src="/images/anythingllm-setup/llm-configuration/cloud/perplexity-ai/header-image.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="Perplexity AI"
+    />
+  </Card>
 
-<Card title="Mistral API" href="cloud/mistral-ai">
-  <Image
-    src="/images/anythingllm-setup/llm-configuration/cloud/mistral-ai/header-image.png"
-    height={1080}
-    width={1920}
-    quality={100}
-    alt="Mistral API"
-  />
-</Card>
+  <Card title="Mistral API" href="cloud/mistral-ai">
+    <Image
+      src="/images/anythingllm-setup/llm-configuration/cloud/mistral-ai/header-image.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="Mistral API"
+    />
+  </Card>
 
-<Card title="Groq" href="cloud.groq">
-  <Image
-    src="/images/anythingllm-setup/llm-configuration/cloud/groq/header-image.png"
-    height={1080}
-    width={1920}
-    quality={100}
-    alt="Groq"
-  />
-</Card>
+  <Card title="Groq" href="cloud.groq">
+    <Image
+      src="/images/anythingllm-setup/llm-configuration/cloud/groq/header-image.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="Groq"
+    />
+  </Card>
 
   <Card title="OpenAI (generic)" href="cloud/openai-generic"> 
     <Image
@@ -223,7 +223,7 @@ We allow you to connect to both local and cloud-based LLMs - even at the same ti
 </Cards>
 
 export const Card = Object.assign(
-  // Copy card component and add default props
+  // 카드 컴포넌트를 복사하고 기본 속성을 추가합니다.
   Cards.Card.bind(),
   {
     displayName: "Card",

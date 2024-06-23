@@ -1,6 +1,6 @@
 ---
-title: "OpenAI Embedder"
-description: "OpenAI offers 3 embedding models that vary between performance and dimension.."
+title: "OpenAI 임베더"
+description: "OpenAI는 성능과 차원이 다른 3가지 임베딩 모델을 제공합니다."
 ---
 
 import { Callout } from "nextra/components";
@@ -11,38 +11,38 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="OpenAI Embedder"
+  alt="OpenAI 임베더"
 />
 
-# OpenAI Embedder
+# OpenAI 임베더
 
-OpenAI offers 3 embedding models that vary between performance and dimension. Check with OpenAI for up to date pricing.
+OpenAI는 성능과 차원이 다른 3가지 임베딩 모델을 제공합니다. 최신 가격 정보는 OpenAI에 확인하십시오.
 
-When you attempt to embed documents in AnythingLLM we will provide a price estimate.
+TeamplGPT에서 문서를 임베드하려고 할 때 비용 추정치를 제공합니다.
 
-| MODEL                  | ~ PAGES PER DOLLAR | MAX INPUT |
-| :--------------------- | :----------------: | :-------: |
-| text-embedding-3-small |       62,500       |   8,191   |
-| text-embedding-ada-002 |       12,500       |   8,191   |
-| text-embedding-3-large |       9,615        |   8,191   |
+| 모델                   | 달러 당 ~ 페이지  | 최대 입력 |
+| :--------------------- | :---------------: | :-------: |
+| text-embedding-3-small |      62,500       |   8,191   |
+| text-embedding-ada-002 |      12,500       |   8,191   |
+| text-embedding-3-large |       9,615       |   8,191   |
 
-## Connecting to OpenAI
+## OpenAI에 연결하기
 
 <Callout type="info" emoji="️💡">
-  **Valid API Key required!**
+  **유효한 API 키 필요!**
 
-    You must obtain a valid API key from [platform.openai.com](https://platform.openai.com) for this integration to work.
+    이 통합을 사용하려면 [platform.openai.com](https://platform.openai.com)에서 유효한 API 키를 얻어야 합니다.
 
-    Ensure you also have attached a billing account or you may still be unable to use this provider.
+    또한 청구 계정을 연결해야 사용할 수 있습니다.
 
 </Callout>
 
-You can update your model to a different model at any time in the **Settings**.
+**설정**에서 언제든지 다른 모델로 업데이트할 수 있습니다.
 
 <Image
   src="/images/anythingllm-setup/embedder-configuration/cloud/openai/openai-embedder.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="OpenAI Embedder"
+  alt="OpenAI 임베더"
 />

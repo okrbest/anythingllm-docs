@@ -1,6 +1,6 @@
 ---
-title: "Cloud Docker Installation"
-description: "Cloud Docker Installation guide for AnythingLLM"
+title: "클라우드 Docker 설치"
+description: "TeamplGPT의 클라우드 Docker 설치 가이드"
 ---
 
 import { Callout } from "nextra/components";
@@ -11,44 +11,44 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Installation Cloud Docker"
+  alt="TeamplGPT Installation Cloud Docker"
 />
 
-# Run AnythingLLM on Cloud using Docker
+# Docker를 사용하여 클라우드에서 TeamplGPT 실행
 
-Running AnythingLLM on a cloud service is the best way to run a private multi-user instance of AnythingLLM with full control.
+TeamplGPT를 클라우드 서비스에서 실행하는 것은 완전한 제어가 가능한 개인 다중 사용자 인스턴스를 실행하는 가장 좋은 방법입니다.
 
 <Callout type="info" emoji="💡">
-  **Easy Cloud Deployment**
+  **간편한 클라우드 배포**
 
-    AnythingLLM offers easily integrated one-click docker deployment templates with [Railway](https://railway.app/template/HNSCS1?referralCode=WFgJkn) and [Render](https://render.com/deploy?repo=https://github.com/Mintplex-Labs/anything-llm&branch=render).
+    TeamplGPT는 [Railway](https://railway.app/template/HNSCS1?referralCode=WFgJkn) 및 [Render](https://render.com/deploy?repo=https://github.com/Mintplex-Labs/anything-llm&branch=render)와 쉽게 통합되는 원클릭 Docker 배포 템플릿을 제공합니다.
 
-    _This is the easiest way to self-host a cloud server version of AnythingLLM_
+    _이는 TeamplGPT 클라우드 서버 버전을 자가 호스팅하는 가장 쉬운 방법입니다._
 
 </Callout>
 
-| Provider              | Minimum Instance size |
-| --------------------- | --------------------- |
-| Amazon Web Services   | t3.small              |
-| Google Cloud Provider | e2-standard-2         |
-| Azure Cloud           | B2ps v2               |
+| 제공자                | 최소 인스턴스 크기 |
+| --------------------- | ------------------ |
+| Amazon Web Services   | t3.small           |
+| Google Cloud Provider | e2-standard-2      |
+| Azure Cloud           | B2ps v2            |
 
 <Callout type="info" emoji="💡">
-  AnythingLLM offers community-maintained deployment templates for cloud
-  providers
+  TeamplGPT는 클라우드 제공자에 대한 커뮤니티 유지 관리 배포 템플릿을
+  제공합니다.
   https://github.com/Mintplex-Labs/anything-llm/tree/master/cloud-deployments
 </Callout>
 
-Once you are prepared to run AnythingLLM on your server the process is quite simple.
+서버에서 TeamplGPT를 실행할 준비가 되면 과정은 매우 간단합니다.
 
-You should provision a folder somewhere on the host machine so that you can re-pull the latest versions of AnythingLLM and persist data between container rebuilds.
+호스트 머신의 어딘가에 폴더를 프로비저닝하여 TeamplGPT의 최신 버전을 다시 가져오고 컨테이너 재구성 간에 데이터를 지속할 수 있도록 해야 합니다.
 
 <Callout type="warning" emoji="⚠️">
-  **BACKWARDS COMPATIBILITY**
+  **하위 호환성**
 
-    The Mintplex Labs team takes great care to ensure AnythingLLM is always backward compatible.
+    Mintplex Labs 팀은 TeamplGPT가 항상 하위 호환성을 유지하도록 최선을 다하고 있습니다.
 
-    In the event this changes you will be alerted via code, deployment, or our regular communication channels on social, Discord, and email.
+    이 상황이 변경될 경우 코드, 배포 또는 소셜, Discord, 이메일을 통한 정기적인 커뮤니케이션 채널을 통해 알림을 받게 됩니다.
 
 </Callout>
 
@@ -68,7 +68,7 @@ You should provision a folder somewhere on the host machine so that you can re-p
  -e STORAGE_DIR="/app/server/storage" \
  mintplexlabs/anythingllm:master
 
- # visit http://localhost:3001 to use AnythingLLM!
+ # visit http://localhost:3001 to use TeamplGPT!
 ```
 
-Done! You are using AnythingLLM!
+완료! 이제 TeamplGPT를 사용하고 있습니다!

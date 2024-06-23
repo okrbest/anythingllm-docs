@@ -12,3 +12,12 @@
 .mt-20 {
   margin-top: 20px;
 }
+
+body code {
+  font-family: "Noto Sans KR", monospace;
+  font-size: 1rem !important; /* 폰트 크기 */
+  font-weight: 700 !important; /* 폰트 굵기 */
+  background-color: #004ca3; /* 배경 색상 추가 (선택 사항) */
+  padding: 0.2em 0.4em; /* 패딩 추가 (선택 사항) */
+  border-radius: 3px; /* 둥근 모서리 추가 (선택 사항) */
+}

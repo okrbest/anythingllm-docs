@@ -1,7 +1,7 @@
 {
   "name": "anythingllm-docs",
   "version": "1.1.0",
-  "description": "AnythingLLM Documentation",
+  "description": "TeamplGPT Documentation",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

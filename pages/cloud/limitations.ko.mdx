@@ -1,32 +1,31 @@
 ---
-title: "Limitations"
-description: "Limitations of AnythingLLM Hosted Cloud Instances"
+title: "제한 사항"
+description: "TeamplGPT 호스팅 클라우드 인스턴스의 제한 사항"
 ---
 
 import { Callout } from "nextra/components";
 
-# AnythingLLM Cloud Limitations
+# TeamplGPT 클라우드 제한 사항
 
-AnythingLLM Hosted Cloud is the quickest way to get a multi-user, managed, and hosted version of AnythingLLM on a custom domain.
+TeamplGPT 호스팅 클라우드는 사용자 지정 도메인에서 멀티 유저, 관리형, 호스팅된 TeamplGPT 버전을 가장 빠르게 사용할 수 있는 방법입니다.
 
-While this form of accessing AnythingLLM there are some acute limitations you may not experience with other forms of AnythingLLM, like Desktop or self hosted.
+하지만 이 형태로 TeamplGPT를 사용할 때는 데스크탑 버전이나 자체 호스팅과는 다른 몇 가지 제한 사항이 있을 수 있습니다.
 
-## No "built-in" LLM
+## 내장된 LLM 없음
 
-AnythingLLM hosted cloud does not ship with a built-in LLM you can use like in our desktop instance. This is due to CPU limitations of the instance we provide for you, which has no GPU and limited CPUs and RAM.
+TeamplGPT 호스팅 클라우드는 데스크탑 인스턴스와 달리 사용할 수 있는 내장 LLM을 제공하지 않습니다. 이는 제공된 인스턴스의 CPU 한계 때문이며, GPU가 없고 CPU와 RAM이 제한적이기 때문입니다.
 
-Due to this, we limit access **only** to local LLMs that you can run yourself and connect to, or any supported cloud-based LLM provider.
+이로 인해 로컬에서 실행할 수 있는 LLM 또는 지원되는 클라우드 기반 LLM 제공자에만 접근이 가능합니다.
 
-## Limited capacity for built-in embedder
+## 내장 임베더의 용량 제한
 
 <Callout type="error" emoji="️‼️">
-  **Beware!** The built-in embedder will not block you from trying to embed a
-  5,000pg PDF, but it will crash your instance. (502 error).
+  **주의!** 내장 임베더는 5,000페이지의 PDF를 임베딩하려고 할 때 이를 차단하지
+  않지만, 인스턴스가 충돌할 수 있습니다. (502 오류).
 </Callout>
 
-AnythingLLM **does allow** you to use the built-in embedder model, which is extremely convenient, cannot embed on CPU any arbitrarily large document.
+TeamplGPT는 내장된 임베더 모델을 사용할 수 있게 하지만, CPU로 임의의 큰 문서를 임베딩할 수는 없습니다.
 
-The Starter tier ships with **very minimal** compute resources while Professional ships with much more compute. This means that uploading a large document (in words, not file size) can overwhelm the CPU and cause
-the process to exit. This will result in a 502 error.
+Starter 등급은 **아주 적은** 컴퓨팅 자원을 제공하며, Professional 등급은 더 많은 컴퓨팅 자원을 제공합니다. 즉, 큰 문서(파일 크기가 아닌 단어 수 기준)를 업로드하면 CPU에 과부하가 걸려 프로세스가 종료될 수 있습니다. 이는 502 오류로 이어집니다.
 
-### [How to fix the 502 error on your instance &rarr;](/)
+### [인스턴스에서 502 오류를 해결하는 방법 &rarr;](./error-502)

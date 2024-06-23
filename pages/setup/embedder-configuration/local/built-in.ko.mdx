@@ -1,6 +1,6 @@
 ---
-title: "AnythingLLM Default Embedder"
-description: "AnythingLLM ships with a built-in embedder model that runs on CPU"
+title: "TeamplGPT 기본 임베더"
+description: "TeamplGPT는 CPU에서 실행되는 내장 임베더 모델을 포함하고 있습니다"
 ---
 
 import { Callout } from "nextra/components";
@@ -11,26 +11,26 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Default Embedder"
+  alt="TeamplGPT 기본 임베더"
 />
 
-# AnythingLLM Default Embedder
+# TeamplGPT 기본 임베더
 
 <Callout type="warning" emoji="️⚠️">
-  **Heads up!**
+  **알림!**
 
-    This embedding model will download (25mb) on the very first embed **and** runs on CPU. You should have at least 2GB of RAM available to ensure the process does not bottleneck.
+    이 임베딩 모델은 첫 임베딩 시 (25MB) 다운로드되며 **CPU에서 실행**됩니다. 프로세스가 병목 현상을 일으키지 않도록 최소 2GB의 RAM이 필요합니다.
 
 </Callout>
 
-AnythingLLM ships with a built-in embedder model that runs on CPU.
+TeamplGPT는 CPU에서 실행되는 내장 임베더 모델을 포함하고 있습니다.
 
-The model is the popular [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) model, which is primarily trained on English documents.
+이 모델은 주로 영어 문서에 대해 학습된 인기 있는 [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) 모델입니다.
 
 <Image
   src="/images/anythingllm-setup/embedder-configuration/local/built-in/default-embedder.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM Default Embedder"
+  alt="TeamplGPT 기본 임베더"
 />

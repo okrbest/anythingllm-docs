@@ -1,5 +1,5 @@
 ---
-title: "Why is AnythingLLM not displaying Ollama models?"
+title: "Why is TeamplGPT not displaying Ollama models?"
 description: "We get this question many times a week"
 ---
 
@@ -11,31 +11,31 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM -- Why is AnythingLLM not displaying Ollama models?"
+  alt="TeamplGPT -- Why is TeamplGPT not displaying Ollama models?"
 />
 
-## AnythingLLM Desktop Version
+## TeamplGPT Desktop Version
 
-If you are using AnythingLLM desktop version then use `http://127.0.0.1:11434` as Ollama Base URL on AnythingLLM
+If you are using TeamplGPT desktop version then use `http://127.0.0.1:11434` as Ollama Base URL on TeamplGPT
 
 <Image
   src="/images/faq/ollama-models-not-loading/ollama-correct-url.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="Correct Ollama Base URL for AnythingLLM Desktop Version"
+  alt="Correct Ollama Base URL for TeamplGPT Desktop Version"
 />
 
-## AnythingLLM Docker Version
+## TeamplGPT Docker Version
 
-If you are using AnythingLLM Docker version then use `http://host.docker.internal:11434` as Ollama Base URL on AnythingLLM
+If you are using TeamplGPT Docker version then use `http://host.docker.internal:11434` as Ollama Base URL on TeamplGPT
 
 <Image
   src="/images/faq/ollama-models-not-loading/ollama-correct-url-docker.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="Correct Ollama Base URL for AnythingLLM Docker Version"
+  alt="Correct Ollama Base URL for TeamplGPT Docker Version"
 />
 
 <Callout type="info" emoji="️💡">
@@ -43,20 +43,19 @@ If you are using AnythingLLM Docker version then use `http://host.docker.interna
   `http://172.17.0.1:xxxx` instead to emulate this functionality.
 </Callout>
 
+## What's the difference between Ollama and the TeamplGPT LLM provider? (Desktop Only)
 
-## What's the difference between Ollama and the AnythingLLM LLM provider? (Desktop Only)
-
-You can either choose to run Ollama on your own or use the built in AnythingLLM LLM provider. If you use the AnythingLLM provider, a separate instance of Ollama is being run under the hood. This is why if you download models into the version of Ollama that you are running separate from AnythingLLM, it will not show those models as downloaded in the AnythingLLM LLM provider.
+You can either choose to run Ollama on your own or use the built in TeamplGPT LLM provider. If you use the TeamplGPT provider, a separate instance of Ollama is being run under the hood. This is why if you download models into the version of Ollama that you are running separate from TeamplGPT, it will not show those models as downloaded in the TeamplGPT LLM provider.
 
 <Image
   src="/images/faq/ollama-models-not-loading/anythingllm-ollama-provider.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM built in Ollama provider"
+  alt="TeamplGPT built in Ollama provider"
 />
 
-## Why is AnythingLLM not displaying Ollama models?
+## Why is TeamplGPT not displaying Ollama models?
 
 First make sure ollama is running on the your machine in the background, you can confirm this by visting `http://127.0.0.1:11434`
 
@@ -67,4 +66,3 @@ First make sure ollama is running on the your machine in the background, you can
   quality={100}
   alt="Ollama running on background"
 />
-

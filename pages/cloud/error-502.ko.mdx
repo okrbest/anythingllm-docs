@@ -1,81 +1,78 @@
 ---
-title: "502 Error on AnythingLLM Hosted"
-description: "How to reboot your crashed instance from too large of a document"
+title: "TeamplGPT 호스팅에서 502 오류 발생"
+description: "너무 큰 문서로 인해 충돌된 인스턴스를 재부팅하는 방법"
 ---
 
 import { Callout } from "nextra/components";
 import Image from "next/image";
 
 <Callout type="warning" emoji="️⚠️">
-  **Notice**
-  This page only applies to the Hosted Cloud version of AnythingLLM and only applies to those using the built-in embedder model.
+  **알림**
+  이 페이지는 TeamplGPT 호스팅 클라우드 버전과 내장 임베더 모델을 사용하는 사용자에게만 적용됩니다.
 
-Following these instructions are the preferred way to get your instance back online.
+이 지침을 따르면 인스턴스를 다시 온라인 상태로 만드는 데 도움이 됩니다.
 
-**Please do not e-mail team@mintplexlabs.com unless this process does not work for you.**
-
+**이 과정이 실패하지 않는 한 team@mintplexlabs.com으로 이메일을 보내지 마십시오.**
 </Callout>
 
-### I am getting a 502 on my hosted AnythingLLM!
+### TeamplGPT 호스팅에서 502 오류가 발생했어요!
 
 <Callout type="error" emoji="️⚠️">
-  **Notice** This "crash" resulted from your actions on uploading of a document.
-  If you upload the same document again it **will crash again**.
+  **알림** 이 "충돌"은 문서를 업로드하는 과정에서 발생했습니다.
+  동일한 문서를 다시 업로드하면 **또한 충돌할 것입니다**.
 </Callout>
 
-**What happened?** You uploaded too large of a document to your instance (word count, not file size) and on your tier likely overwhelmed the CPU causing the process to be killed to prevent the instance from freezing. This same error can occur from uploading _many_ files that are all medium sized at the same time.
+**무슨 일이 일어났나요?** 인스턴스에 너무 큰 문서(파일 크기가 아닌 단어 수 기준)를 업로드하여 CPU가 과부하되어 프로세스가 종료되고 인스턴스가 멈추는 것을 방지하기 위해 프로세스가 종료되었습니다. 동일한 오류는 여러 개의 중간 크기 파일을 한 번에 업로드할 때도 발생할 수 있습니다.
 
-Recommendations for maximum file size based on tier:
+등급에 따른 최대 파일 크기 권장 사항:
 
-- **Starter Tier**: 10k words per file
-- **Professional Tier**: 50k words per file
+- **Starter 등급**: 파일당 10,000 단어
+- **Professional 등급**: 파일당 50,000 단어
 
-### How do I get my instance back up?
+### 인스턴스를 다시 시작하려면 어떻게 해야 하나요?
 
-- Visit [Your My.Mintplexlabs.com](https://my.mintplexlabs.com/dashboard) account.
+- [My.Mintplexlabs.com](https://my.mintplexlabs.com/dashboard) 계정에 방문하세요.
 
-Click on your subscription item that is currently offline (Click the gear icon)
+현재 오프라인 상태인 구독 항목을 클릭하세요 (톱니바퀴 아이콘을 클릭)
 
 <Image
   src="/images/cloud/subitem.png"
   height={500}
   width={500}
   quality={100}
-  alt="AnythingLLM Subscription Item"
+  alt="TeamplGPT 구독 항목"
 />
 
-You will now see a screen that looks like this
+다음과 같은 화면이 나타납니다
 
 <Image
   src="/images/cloud/dashboard.png"
   height={500}
   width={500}
   quality={100}
-  alt="AnythingLLM Subscription Dashboard"
+  alt="TeamplGPT 구독 대시보드"
 />
 
-Scroll down and you will see a button labeled "Reboot". Clicking this will reboot your instance and it will be available again shortly after.
+아래로 스크롤하여 "Reboot" 버튼을 찾으세요. 이 버튼을 클릭하면 인스턴스가 재부팅되고 잠시 후 다시 사용할 수 있게 됩니다.
 
 <Image
   src="/images/cloud/reboot.png"
   height={500}
   width={500}
   quality={100}
-  alt="AnythingLLM Subscription Reboot"
+  alt="TeamplGPT 구독 재부팅"
 />
 
-### How do I prevent this from happening again?
+### 이러한 상황을 방지하려면 어떻게 해야 하나요?
 
 <Callout type="info" emoji="️💡">
-  **Pro tip!**
+  **팁!**
 
-If you have a large amount of really large files you want to embed - using a cloud based embedder will unlock the ability to quickly upload and
-use these files with zero concern for overloading of the instance.
-
+정말 큰 파일을 많이 임베딩하려면 클라우드 기반 임베더를 사용하면 인스턴스 과부하 걱정 없이 빠르게 파일을 업로드하고 사용할 수 있습니다.
 </Callout>
 
-There are a few ways to prevent this situation from occurring again.
+이 상황을 방지하는 몇 가지 방법이 있습니다.
 
-- Upload smaller documents, one at a time.
-- Break larger documents into more "digestible" files.
-- [Switch to a cloud based embedder](/anythingllm-setup/embedder-configuration/overview#cloud-model-providers)
+- 더 작은 문서를 하나씩 업로드합니다.
+- 큰 문서를 더 작은 파일로 나눕니다.
+- [클라우드 기반 임베더로 전환](/anythingllm-setup/embedder-configuration/overview#cloud-model-providers)

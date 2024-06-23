@@ -35,7 +35,7 @@ const config: DocsThemeConfig = {
   },
   useNextSeoProps() {
     return {
-      titleTemplate: "%s ~ AnythingLLM", // This is the text shown on the tab name, %s will show the title of current page
+      titleTemplate: "%s ~ TeamplGPT", // This is the text shown on the tab name, %s will show the title of current page
     };
   },
   sidebar: {
@@ -74,7 +74,7 @@ const config: DocsThemeConfig = {
         <meta name="twitter:site:domain" content="docs.useanything.com" />
         <meta
           property="twitter:title"
-          content="AnythingLLM | The all-in-one AI desktop app."
+          content="TeamplGPT | The all-in-one AI desktop app."
         />
         <meta
           property="twitter:description"
@@ -115,7 +115,7 @@ const config: DocsThemeConfig = {
     key: "v1.5.7-release", // Storage key to keep the banner state (dismissed or not). If you have updated your banner text, you should change the key to make sure the banner is shown again.
     text: (
       <a href="https://useanything.com/download" target="_blank">
-        🚀 AnythingLLM v1.5.7 is out. Update now →
+        🚀 TeamplGPT v1.5.7 is out. Update now →
       </a>
     ),
   },
