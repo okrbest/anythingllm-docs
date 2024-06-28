@@ -1,6 +1,6 @@
 {
   "index": {
-    "title": "▲ Home",
+    "title": "▲ 홈",
     "theme": {
       "breadcrumb": false,
       "footer": true,
@@ -31,7 +31,7 @@
     }
   },
   "installation": {
-    "title": "설치",
+    "title": "설치 방법",
     "theme": {
       "breadcrumb": false,
       "footer": true,
@@ -51,6 +51,15 @@
   "-- 가이드": {
     "type": "separator",
     "title": "가이드"
+  },
+  "chat-ui": {
+    "title": "채팅 인터페이스 개요",
+    "theme": {
+      "breadcrumb": true,
+      "footer": true,
+      "pagination": true,
+      "toc": true
+    }
   },
   "agent": {
     "title": "AI 에이전트",
@@ -97,12 +106,12 @@
       "toc": true
     }
   },
-  "-- FAQ": {
+  "-- 자주 묻는 질문": {
     "type": "separator",
     "title": "자주 묻는 질문"
   },
   "llm-not-using-my-docs": {
-    "title": "LLM이 내 문서를 사용하지 않음",
+    "title": "LLM이 내 문서를 사용하지 않아요!",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -110,8 +119,8 @@
       "toc": true
     }
   },
-  "ollama-models-not-loading": {
-    "title": "Ollama 문제 해결",
+  "agent-not-using-tools": {
+    "title": "AI 에이전트가 도구를 사용하지 않아요!",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -119,9 +128,27 @@
       "toc": true
     }
   },
-  "--- 더보기": {
+  "ollama-connection-troubleshooting": {
+    "title": "Ollama 연결 문제 해결",
+    "theme": {
+      "breadcrumb": true,
+      "footer": true,
+      "pagination": true,
+      "toc": true
+    }
+  },
+  "--- 더 보기": {
     "type": "separator",
-    "title": "더보기"
+    "title": "더 보기"
+  },
+  "beta-preview": {
+    "title": "베타 미리보기",
+    "theme": {
+      "breadcrumb": true,
+      "footer": true,
+      "pagination": true,
+      "toc": true
+    }
   },
   "cloud": {
     "title": "TeamplGPT 클라우드",
@@ -151,7 +178,7 @@
     }
   },
   "contribute": {
-    "title": "기여",
+    "title": "기여하기",
     "theme": {
       "breadcrumb": false,
       "footer": true,
@@ -160,11 +187,11 @@
     }
   },
   "company": {
-    "title": "OKR Best",
+    "title": "Mintplex Labs",
     "type": "menu",
     "items": {
       "sponsor": {
-        "title": "후원하기",
+        "title": "후원",
         "href": "https://github.com/sponsors/Mintplex-Labs"
       },
       "contact": {
@@ -176,7 +203,7 @@
         "href": "/licences"
       },
       "privacy": {
-        "title": "개인정보 보호정책",
+        "title": "개인정보 보호",
         "href": "/privacy"
       }
     }

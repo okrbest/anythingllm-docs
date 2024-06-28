@@ -1,0 +1,167 @@
+---
+title: "Ollama 설정 및 문제 해결 가이드"
+description: "TeamplGPT와 Ollama 설정을 위한 빠른 솔루션"
+---
+
+import { Callout, Tabs } from "nextra/components";
+import Image from "next/image";
+
+<Image
+  src="/images/faq/ollama-models-not-loading/header-image.png"
+  height={1080}
+  width={1920}
+  quality={100}
+  alt="TeamplGPT와 Ollama 설정 가이드"
+/>
+
+# Ollama 연결 문제 해결
+
+## Ollama가 실행 중인지 확인
+
+어떠한 수정이나 URL 변경을 시도하기 전에 Ollama가 정상적으로 실행 중인지 확인하세요:
+
+1. 웹 브라우저를 열고 `http://127.0.0.1:11434`로 이동합니다.
+2. 아래와 같은 페이지가 보여야 합니다:
+
+<Image
+  src="/images/faq/ollama-models-not-loading/ollama-running.png"
+  height={1080}
+  width={1920}
+  quality={100}
+  alt="Ollama가 백그라운드에서 실행 중인 모습"
+/>
+
+이 페이지가 보이지 않으면 Ollama 설치를 문제 해결하고 정상적으로 실행 중인지 확인하세요.
+
+## 자동 URL 감지 (LLM 및 임베딩 제공자)
+<Callout type="info" emoji="ℹ️">
+  TeamplGPT는 Ollama에 대한 자동 URL 감지 기능을 제공합니다. 자동 감지가 실패하는 경우에만 수동 구성이 필요합니다.
+</Callout>
+
+### URL이 성공적으로 감지됨
+Ollama 제공자를 선택할 때, TeamplGPT는 Ollama URL을 자동으로 감지하려고 시도합니다. 기본 URL 입력 옵션이 숨겨져 있다면, TeamplGPT가 자동으로 URL을 감지한 것입니다.
+<Image
+  src="/images/faq/ollama-models-not-loading/ollama-detected-collapsed.png"
+  height={1080}
+  width={1920}
+  quality={100}
+  style={{
+    "border-radius": "20px",
+    "margin-top": "20px",
+    "object-fit": "none",
+    "object-position": "-320px top",
+    "width": "100%",
+    "height": "600px",
+  }}
+  alt="Ollama URL이 자동으로 감지된 모습"
+/>
+
+### URL 감지 실패
+수동 엔드포인트 입력이 확장된 경우, URL을 감지할 수 없었습니다.
+<Image
+  src="/images/faq/ollama-models-not-loading/ollama-cannot-detect.png"
+  height={1080}
+  width={1920}
+  quality={100}
+  style={{
+    "border-radius": "20px",
+    "margin-top": "20px",
+    "object-fit": "none",
+    "object-position": "-320px top",
+    "width": "100%",
+    "height": "650px",
+  }}
+  alt="Ollama URL 감지 실패"
+/>
+
+Ollama가 시작되지 않았을 때 TeamplGPT가 URL을 감지하려고 시도했다면, Ollama를 시작한 후 `Auto-Detect` 버튼을 눌러보세요. 이렇게 하면 URL을 자동으로 감지하고 `모델` 및 `최대 토큰` 값을 선택할 수 있습니다.
+
+## 올바른 Ollama URL 설정
+<Callout type="error" emoji="🚨">
+  TeamplGPT가 자동으로 URL을 감지하지 못한 경우, 이는 TeamplGPT의 문제가 아니라 Ollama 설정/구성 문제일 가능성이 높습니다.
+</Callout>
+
+Ollama 설치가 제대로 실행 중이며 방화벽 등에 의해 차단되지 않았음을 100% 확인했다면, 수동으로 URL을 설정할 수 있습니다.
+
+TeamplGPT 버전을 선택하여 올바른 Ollama URL을 찾으세요:
+
+<Tabs items={['데스크톱', '도커', '셀프 호스팅']}>
+  <Tabs.Tab>
+    ### 데스크톱 버전
+
+    사용: `http://127.0.0.1:11434`
+
+    <Image
+      src="/images/faq/ollama-models-not-loading/ollama-correct-url.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      alt="TeamplGPT 데스크톱 버전용 올바른 Ollama 기본 URL"
+    />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+    ### 도커 버전
+
+    - 윈도우/맥: `http://host.docker.internal:11434`
+    - 리눅스: `http://172.17.0.1:11434`
+    <Callout type="warning" emoji="⚠️">
+      리눅스에서는 `http://172.17.0.1:11434`을 사용하세요. `host.docker.internal`은 작동하지 않습니다.
+    </Callout>
+    <Image
+      src="/images/faq/ollama-models-not-loading/ollama-correct-url-docker.png"
+      height={1080}
+      width={1920}
+      quality={100}
+      style={{
+        "border-radius": "20px",
+        "margin-top": "20px",
+        "object-fit": "none",
+        "object-position": "-320px top",
+        "width": "100%",
+        "height": "650px",
+      }}
+      alt="TeamplGPT 도커 버전용 올바른 Ollama 기본 URL"
+    />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+    ### 셀프 호스팅 버전
+
+    다음 중 하나를 사용:
+    - `http://localhost:11434`
+    - `http://127.0.0.1:11434`
+  </Tabs.Tab>
+</Tabs>
+
+## TeamplGPT 데스크톱: 내장 vs. 독립형 Ollama
+
+TeamplGPT 데스크톱은 두 가지 Ollama 옵션을 제공합니다:
+
+1. **내장 TeamplGPT LLM 제공자**:
+   - 별도의 Ollama 인스턴스를 내부적으로 실행합니다.
+   - 독립형 Ollama에 다운로드된 모델은 여기에서 나타나지 않습니다.
+
+2. **독립형 Ollama**:
+   - 시스템에서 Ollama를 별도로 실행합니다.
+   - URL로 `http://127.0.0.1:11434`를 사용합니다.
+
+<Image
+  src="/images/faq/ollama-models-not-loading/anythingllm-ollama-provider.png"
+  height={1080}
+  width={1920}
+  quality={100}
+  alt="TeamplGPT 내장 Ollama 제공자"
+/>
+
+## 문제 해결
+
+여전히 문제가 발생하는 경우:
+
+1. 설정에 맞는 올바른 URL을 사용하는지 확인하세요.
+2. 연결을 차단하는 방화벽 또는 네트워크 문제를 확인하세요.
+3. Ollama와 TeamplGPT를 모두 다시 시작하세요.
+
+<Callout type="info" emoji="💡">
+  이러한 단계를 시도한 후에도 문제가 지속되면, Discord에 방문하여 질문을 남겨주세요.
+</Callout>
