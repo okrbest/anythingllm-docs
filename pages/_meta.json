@@ -71,7 +71,7 @@
     }
   },
   "setup": {
-    "title": "TeamplGPT Setup",
+    "title": "AnythingLLM Setup",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -80,7 +80,7 @@
     }
   },
   "update": {
-    "title": "How to Update TeamplGPT",
+    "title": "How to Update AnythingLLM",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -89,7 +89,7 @@
     }
   },
   "uninstall": {
-    "title": "How to Uninstall TeamplGPT",
+    "title": "How to Uninstall AnythingLLM",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -98,7 +98,7 @@
     }
   },
   "debug": {
-    "title": "How to Run TeamplGPT in Debug Mode",
+    "title": "How to Run AnythingLLM in Debug Mode",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -151,7 +151,7 @@
     }
   },
   "cloud": {
-    "title": "TeamplGPT Cloud",
+    "title": "AnythingLLM Cloud",
     "theme": {
       "breadcrumb": true,
       "footer": true,
