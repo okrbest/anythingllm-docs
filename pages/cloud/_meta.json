@@ -18,7 +18,7 @@
     }
   },
   "error-502": {
-    "title": "502 Error on TeamplGPT Hosted",
+    "title": "502 Error on AnythingLLM Hosted",
     "theme": {
       "breadcrumb": true,
       "footer": true,
