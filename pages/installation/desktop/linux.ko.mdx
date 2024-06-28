@@ -1,6 +1,6 @@
 ---
 title: "Linux 설치"
-description: "TeamplGPT의 Linux 설치 가이드"
+description: "TeamplGPT Linux 설치 가이드"
 ---
 
 import { Callout, Cards } from "nextra/components";
@@ -16,88 +16,49 @@ import Image from "next/image";
 
 # Linux 설치
 
-Linux에 TeamplGPT를 설치하는 방법은 **두 가지**가 있습니다.
+Linux 배포판에 TeamplGPT를 설치하는 방법은 **두 가지**가 있습니다.
 
-**[1. 설치 `.AppImage` 파일을 사용하여 설치](#install-using-the-installation-file)**
+**1. [설치 스크립트를 사용하여 설치하기](#install-using-the-installer-script)**
 
-**[2. Docker를 사용하여 설치](#install-using-docker)**
+**2. [Docker를 사용하여 설치하기](#install-using-docker)**
+
+## 설치 스크립트를 사용하여 설치하기
 
 <Callout type="warning" emoji="⚠️">
-  **운영 체제 공지**
+  **주의 사항**
 
-➤ TeamplGPT는 Ubuntu 시스템에서 빌드되었으며 다른 배포판에서는 잘 작동하지 않을 수 있습니다.
+➤ TeamplGPT는 AppImage로 패키징되어 있지만, 단순히 AppImage만 실행하면 부팅할 수 **없습니다**. 아래 스크립트를 사용하시기 바랍니다.
 
-➤ 설치 또는 부팅 문제 발생 시 [Github Issue](https://github.com/Mintplex-Labs/anything-llm/issues)를 열어주세요.
-
-➤ 모든 Linux OS에서 TeamplGPT와 동일한 경험을 제공하고자 합니다.
+➤ 설치나 부팅 문제 발생 시 [Github Issue](https://github.com/Mintplex-Labs/anything-llm/issues)를 통해 문의해 주세요.
 
 </Callout>
 
-## 설치 파일 다운로드
+먼저, 터미널을 열고 아래 명령어를 실행하세요.
 
-여기에서 최신 버전의 TeamplGPT Linux를 다운로드할 수 있습니다.
-
-<Cards>
-  <Card
-    title="Linux (generic) x86"
-    href="https://s3.us-west-1.amazonaws.com/public.useanything.com/latest/TeamplGPTDesktop.AppImage"
-  ></Card>
-</Cards>
-
-export const Card = Object.assign(
-  // 카드 구성 요소를 복사하고 기본 속성 추가
-  Cards.Card.bind(),
-  {
-    displayName: "Card",
-    defaultProps: {
-      image: false,
-      arrow: true,
-      target: "_blank",
-    },
-  }
-);
-
-인터넷 브라우저는 보안 설정에 따라 TeamplGPT 데스크탑 앱을 다운로드하고 실행할 것인지 확인할 수 있습니다.
-
-다운로드를 허용하려면 "**유지**"를 클릭하세요.
-
-<Image
-  src="/images/getting-started/installation/linux/browser-warning.png"
-  height={1080}
-  width={1920}
-  quality={100}
-  alt="TeamplGPT Linux Install Browser Warning"
-/>
-
-## 애플리케이션 설치
-
-Linux용 TeamplGPT `.AppImage`를 다운로드한 후 파일에 실행 권한을 부여해야 실행할 수 있습니다.
-
-```shell copy "
- chmod a+x /Downloads/AnythingLLMDesktop.AppImage
+```shell copy
+curl -fsSL https://s3.us-west-1.amazonaws.com/public.useanything.com/latest/installer.sh | sh
 ```
 
-그 후, 다른 앱 이미지처럼 AppImage를 부팅할 수 있습니다. 더블 클릭하거나 터미널을 통해 실행하면 전체 애플리케이션이 부팅됩니다.
+원본 스크립트 내용은 [여기](https://github.com/Mintplex-Labs/anything-llm/blob/desktop/linux_installer.sh)에서 확인할 수 있습니다.
 
-```shell copy showLineNumbers"
-# Assuming we are running the AppImage from the /Downloads folder.
-./AnythingLLMDesktop.AppImage
-# This will run the application in this terminal pane. It will show all logs.
-```
+이 명령어는 TeamplGPT의 최신 버전 AppImage를 다운로드하고, 이를 압축 해제한 후, TeamplGPT를 원활하게 실행할 수 있도록 심볼릭 링크를 제공합니다.
+이 스크립트는 앱을 `$HOME/AnythingLLMDesktop`에 압축 해제합니다.
+
+앱은 언제든지 `./AnythingLLMDesktop/start` 명령어로 실행할 수 있습니다. 이 명령어는 전체 로그를 출력하며 앱을 부팅합니다.
 
 ---
 
-## Docker를 사용하여 설치
+## Docker를 사용하여 설치하기
 
-[Docker](https://www.docker.com/)가 장치에 설치되어 있는지 확인하세요. Docker가 설치되어 있지 않다면 이 [가이드](https://docs.docker.com/desktop/install/linux-install/)를 따라 설치할 수 있습니다.
+먼저, [Docker](https://www.docker.com/)를 설치했는지 확인하세요. Docker가 설치되어 있지 않다면 이 [가이드](https://docs.docker.com/desktop/install/linux-install/)를 따라 설치하세요.
 
-터미널에서 다음 명령어를 실행하세요.
+터미널에서 아래 명령어를 실행하세요.
 
 ```shell copy
  docker pull mintplexlabs/anythingllm
 ```
 
-이 명령어는 Docker에서 최신 TeamplGPT 이미지를 가져옵니다.
+이 명령어는 최신 TeamplGPT 이미지를 Docker에서 가져옵니다.
 
 최신 이미지를 가져온 후, 다음 명령어를 실행하세요.
 
@@ -117,4 +78,4 @@ Linux용 TeamplGPT `.AppImage`를 다운로드한 후 파일에 실행 권한을
 
 이제 브라우저에서 `http://localhost:3001`로 이동하면 TeamplGPT를 사용할 수 있습니다!
 
-모든 데이터와 진행 상황은 컨테이너 재빌드 또는 Docker Hub에서 가져오기 간에 지속됩니다.
+모든 데이터와 진행 상황은 Docker Hub에서 컨테이너를 다시 빌드하거나 이미지를 가져와도 유지됩니다.
