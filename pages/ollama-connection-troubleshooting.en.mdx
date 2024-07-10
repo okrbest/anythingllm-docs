@@ -1,6 +1,6 @@
 ---
 title: "Ollama Setup and Troubleshooting Guide"
-description: "Quick solutions for setting up Ollama with AnythingLLM"
+description: "Quick solutions for setting up Ollama with TeamplGPT"
 ---
 
 import { Callout, Tabs } from "nextra/components";
@@ -11,7 +11,7 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM and Ollama Setup Guide"
+  alt="TeamplGPT and Ollama Setup Guide"
 />
 
 # Ollama Connection Troubleshooting
@@ -36,12 +36,12 @@ If you don't see this page, troubleshoot your Ollama installation and ensure tha
 ## Automatic URL Detection (LLM & Embedding Providers)
 
 <Callout type="info" emoji="ℹ️">
-  AnythingLLM features automatic URL detection for Ollama. Manual configuration
-  is only necessary if auto-detection fails.
+  TeamplGPT features automatic URL detection for Ollama. Manual configuration is
+  only necessary if auto-detection fails.
 </Callout>
-### URL Successfully Detected When selecting the Ollama provider, AnythingLLM attempts
+### URL Successfully Detected When selecting the Ollama provider, TeamplGPT attempts
 to auto detect your Ollama URL. If the option to input the base URL is hidden, the
-URL was automatically detected by AnythingLLM.
+URL was automatically detected by TeamplGPT.
 <Image
   src="/images/faq/ollama-models-not-loading/ollama-detected-collapsed.png"
   height={1080}
@@ -74,18 +74,18 @@ able to be detected.
   }}
   alt="Ollama URL failed detection"
 />
-If Ollama was not started when AnythingLLM tried to detect the URL, start up Ollama
+If Ollama was not started when TeamplGPT tried to detect the URL, start up Ollama
 then press the `Auto-Detect` button. This should automatically detect the URL and
 allow you to begin selecting the `Model` and `Max Tokens` values. ## Setting the
 Correct Ollama URL
 <Callout type="error" emoji="🚨">
-  If AnythingLLM was unable to detect your URL automatically, this is most
-  likely an issue with your Ollama setup/configuration NOT AnythingLLM.
+  If TeamplGPT was unable to detect your URL automatically, this is most likely
+  an issue with your Ollama setup/configuration NOT TeamplGPT.
 </Callout>
 If you have confirmed 100% that your Ollama installation is running properly and
 is not being blocked by any firewalls etc, you can choose to set the URLs manually.
 
-Choose your AnythingLLM version to find the correct Ollama URL:
+Choose your TeamplGPT version to find the correct Ollama URL:
 
 <Tabs items={['Desktop', 'Docker', 'Self-hosted']}>
   <Tabs.Tab>
@@ -98,7 +98,7 @@ Choose your AnythingLLM version to find the correct Ollama URL:
       height={1080}
       width={1920}
       quality={100}
-      alt="Correct Ollama Base URL for AnythingLLM Desktop Version"
+      alt="Correct Ollama Base URL for TeamplGPT Desktop Version"
     />
 
   </Tabs.Tab>
@@ -124,7 +124,7 @@ Choose your AnythingLLM version to find the correct Ollama URL:
         "width": "100%",
         "height": "650px",
       }}
-      alt="Correct Ollama Base URL for AnythingLLM Docker Version"
+      alt="Correct Ollama Base URL for TeamplGPT Docker Version"
     />
 
   </Tabs.Tab>
@@ -139,11 +139,11 @@ Choose your AnythingLLM version to find the correct Ollama URL:
   </Tabs.Tab>
 </Tabs>
 
-## AnythingLLM Desktop: Built-in vs. Standalone Ollama
+## TeamplGPT Desktop: Built-in vs. Standalone Ollama
 
-AnythingLLM Desktop offers two Ollama options:
+TeamplGPT Desktop offers two Ollama options:
 
-1. **Built-in AnythingLLM LLM Provider**:
+1. **Built-in TeamplGPT LLM Provider**:
 
    - Runs a separate Ollama instance internally.
    - Models downloaded to standalone Ollama won't appear here.
@@ -157,7 +157,7 @@ AnythingLLM Desktop offers two Ollama options:
   height={1080}
   width={1920}
   quality={100}
-  alt="AnythingLLM built-in Ollama provider"
+  alt="TeamplGPT built-in Ollama provider"
 />
 
 ## Troubleshooting
@@ -166,7 +166,7 @@ If you're still experiencing issues:
 
 1. Confirm you're using the correct URL for your setup.
 2. Check for firewall or network issues blocking the connection.
-3. Restart both Ollama and AnythingLLM.
+3. Restart both Ollama and TeamplGPT.
 
 <Callout type="info" emoji="💡">
   If problems persist after trying these steps, please contact visit our Discord
