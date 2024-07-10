@@ -1,6 +1,6 @@
 ---
-title: "Ollama 설정 및 문제 해결 가이드"
-description: "TeamplGPT와 Ollama 설정을 위한 빠른 해결 방법"
+title: "Ollama 설치 및 문제 해결 가이드"
+description: "AnythingLLM과 Ollama 설정을 위한 빠른 해결책"
 ---
 
 import { Callout, Tabs } from "nextra/components";
@@ -11,36 +11,37 @@ import Image from "next/image";
   height={1080}
   width={1920}
   quality={100}
-  alt="TeamplGPT와 Ollama 설정 가이드"
+  alt="AnythingLLM and Ollama Setup Guide"
 />
 
 # Ollama 연결 문제 해결
 
 ## Ollama가 실행 중인지 확인
 
-수정이나 URL 변경을 시도하기 전에 Ollama가 장치에서 제대로 실행되고 있는지 확인하세요:
+어떤 수정이나 URL 변경을 시도하기 전에 Ollama가 정상적으로 실행 중인지 확인하세요:
 
-1. 웹 브라우저를 열고 `http://127.0.0.1:11434`로 이동하세요.
-2. 아래와 유사한 페이지가 표시되어야 합니다:
+1. 웹 브라우저를 열고 `http://127.0.0.1:11434`로 이동합니다.
+2. 다음과 같은 페이지가 표시되어야 합니다:
 
 <Image
   src="/images/faq/ollama-models-not-loading/ollama-running.png"
   height={1080}
   width={1920}
   quality={100}
-  alt="백그라운드에서 실행 중인 Ollama"
+  alt="Ollama running in background"
 />
 
-이 페이지가 보이지 않으면 Ollama 설치를 문제를 해결하고 제대로 실행되고 있는지 확인한 후 진행하세요.
+이 페이지가 표시되지 않으면 Ollama 설치를 문제 해결하고 정상적으로 실행되고 있는지 확인하세요.
 
-## 자동 URL 감지 (LLM & 임베딩 제공자)
+## 자동 URL 감지 (LLM 및 임베딩 제공자)
 
 <Callout type="info" emoji="ℹ️">
-  TeamplGPT는 Ollama에 대한 자동 URL 감지 기능을 제공합니다. 자동 감지가 실패한 경우에만 수동으로 설정이 필요합니다.
+  AnythingLLM은 Ollama에 대한 자동 URL 감지 기능을 제공합니다. 자동 감지가 실패할 경우에만 수동 구성이 필요합니다.
 </Callout>
 
-### URL 자동 감지 성공
-Ollama 제공자를 선택할 때, TeamplGPT는 Ollama URL을 자동으로 감지하려고 합니다. 기본 URL 입력 옵션이 숨겨져 있다면, TeamplGPT가 URL을 자동으로 감지한 것입니다.
+### URL이 성공적으로 감지됨
+
+Ollama 제공자를 선택할 때, AnythingLLM은 Ollama URL을 자동으로 감지하려고 시도합니다. 기본 URL 입력 옵션이 숨겨져 있으면 URL이 AnythingLLM에 의해 자동으로 감지된 것입니다.
 <Image
   src="/images/faq/ollama-models-not-loading/ollama-detected-collapsed.png"
   height={1080}
@@ -54,11 +55,12 @@ Ollama 제공자를 선택할 때, TeamplGPT는 Ollama URL을 자동으로 감�
     width: "100%",
     height: "600px",
   }}
-  alt="자동으로 감지된 Ollama URL"
+  alt="Ollama URL automatically detected"
 />
 
 ### URL 감지 실패
-수동 엔드포인트 입력이 확장된 경우, URL을 감지할 수 없었습니다.
+
+수동 엔드포인트 입력이 확장되면 URL을 감지할 수 없었던 것입니다.
 <Image
   src="/images/faq/ollama-models-not-loading/ollama-cannot-detect.png"
   height={1080}
@@ -72,24 +74,24 @@ Ollama 제공자를 선택할 때, TeamplGPT는 Ollama URL을 자동으로 감�
     width: "100%",
     height: "650px",
   }}
-  alt="감지에 실패한 Ollama URL"
+  alt="Ollama URL failed detection"
 />
 
-TeamplGPT가 URL을 감지하려고 할 때 Ollama가 시작되지 않은 경우, Ollama를 시작한 후 `자동 감지` 버튼을 누르세요. 이렇게 하면 URL을 자동으로 감지하여 `모델` 및 `최대 토큰` 값을 선택할 수 있게 됩니다.
+AnythingLLM이 URL을 감지하려고 시도할 때 Ollama가 시작되지 않았다면 Ollama를 시작한 후 `자동 감지` 버튼을 누르세요. 이렇게 하면 URL이 자동으로 감지되고 `모델` 및 `최대 토큰` 값을 선택할 수 있게 됩니다.
 
 ## 올바른 Ollama URL 설정
 
 <Callout type="error" emoji="🚨">
-  TeamplGPT가 URL을 자동으로 감지하지 못한 경우, 이는 대부분 Ollama 설정/구성 문제일 가능성이 큽니다. TeamplGPT의 문제가 아닙니다.
+  AnythingLLM이 URL을 자동으로 감지하지 못한 경우, 이는 Ollama 설정/구성 문제일 가능성이 높습니다.
 </Callout>
 
-Ollama 설치가 제대로 실행되고 있고 방화벽 등에 의해 차단되지 않았음을 100% 확신하는 경우, URL을 수동으로 설정할 수 있습니다.
+Ollama 설치가 정상적으로 실행 중이며 방화벽 등으로 차단되지 않았음을 100% 확인한 경우, URL을 수동으로 설정할 수 있습니다.
 
-TeamplGPT 버전을 선택하여 올바른 Ollama URL을 찾으세요:
+자신의 AnythingLLM 버전을 선택하여 올바른 Ollama URL을 확인하세요:
 
-<Tabs items={['데스크탑', 'Docker', '자체 호스팅']}>
+<Tabs items={['데스크톱', '도커', '자가 호스팅']}>
   <Tabs.Tab>
-    ### 데스크탑 버전
+    ### 데스크톱 버전
 
     사용: `http://127.0.0.1:11434`
 
@@ -98,13 +100,13 @@ TeamplGPT 버전을 선택하여 올바른 Ollama URL을 찾으세요:
       height={1080}
       width={1920}
       quality={100}
-      alt="TeamplGPT 데스크탑 버전에 대한 올바른 Ollama 기본 URL"
+      alt="Correct Ollama Base URL for AnythingLLM Desktop Version"
     />
 
   </Tabs.Tab>
 
   <Tabs.Tab>
-    ### Docker 버전
+    ### 도커 버전
 
     - Windows/macOS: `http://host.docker.internal:11434`
     - Linux: `http://172.17.0.1:11434`
@@ -124,31 +126,32 @@ TeamplGPT 버전을 선택하여 올바른 Ollama URL을 찾으세요:
         "width": "100%",
         "height": "650px",
       }}
-      alt="TeamplGPT Docker 버전에 대한 올바른 Ollama 기본 URL"
+      alt="Correct Ollama Base URL for AnythingLLM Docker Version"
     />
 
   </Tabs.Tab>
 
   <Tabs.Tab>
-    ### 자체 호스팅 버전
+    ### 자가 호스팅 버전
 
-    다음 중 하나를 사용하세요:
+    다음 중 하나를 사용:
     - `http://localhost:11434`
     - `http://127.0.0.1:11434`
 
   </Tabs.Tab>
 </Tabs>
 
-## TeamplGPT 데스크탑: 내장형 vs. 독립 실행형 Ollama
+## AnythingLLM 데스크톱: 내장 vs. 독립 실행형 Ollama
 
-TeamplGPT 데스크탑은 두 가지 Ollama 옵션을 제공합니다:
+AnythingLLM 데스크톱은 두 가지 Ollama 옵션을 제공합니다:
 
-1. **내장형 TeamplGPT LLM 제공자**:
-   - 내부적으로 별도의 Ollama 인스턴스를 실행합니다.
-   - 독립 실행형 Ollama에 다운로드된 모델은 여기에서 나타나지 않습니다.
+1. **내장된 AnythingLLM LLM 제공자**:
+
+   - 별도의 Ollama 인스턴스를 내부적으로 실행합니다.
+   - 독립 실행형 Ollama에 다운로드된 모델은 여기에 표시되지 않습니다.
 
 2. **독립 실행형 Ollama**:
-   - 시스템에서 별도로 Ollama를 실행합니다.
+   - 시스템에서 Ollama를 별도로 실행합니다.
    - URL `http://127.0.0.1:11434`를 사용합니다.
 
 <Image
@@ -156,17 +159,17 @@ TeamplGPT 데스크탑은 두 가지 Ollama 옵션을 제공합니다:
   height={1080}
   width={1920}
   quality={100}
-  alt="내장형 TeamplGPT Ollama 제공자"
+  alt="AnythingLLM built-in Ollama provider"
 />
 
 ## 문제 해결
 
 여전히 문제가 발생하는 경우:
 
-1. 설정에 맞는 올바른 URL을 사용하고 있는지 확인하세요.
+1. 설정에 맞는 올바른 URL을 사용 중인지 확인하세요.
 2. 연결을 차단하는 방화벽이나 네트워크 문제를 확인하세요.
-3. Ollama와 TeamplGPT를 모두 재시작하세요.
+3. Ollama와 AnythingLLM을 모두 재시작하세요.
 
 <Callout type="info" emoji="💡">
-  위의 단계를 시도한 후에도 문제가 지속되면, Discord를 방문하여 질문해 주세요.
+  이러한 단계를 시도한 후에도 문제가 지속되면 Discord를 방문하여 질문을 해 주세요.
 </Callout>

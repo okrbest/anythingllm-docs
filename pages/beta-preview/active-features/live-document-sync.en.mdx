@@ -33,7 +33,7 @@ export const Card = Object.assign(Cards.Card.bind(), {
 
 # About Automatic document sync
 
-The <b>Automatic Document Sync</b> feature for TeamplGPT allows you to "watch" a document for active changes. When changes are detected the file will be re-embed and all workspaces using this file will automatically be updated.
+The <b>Automatic Document Sync</b> feature for AnythingLLM allows you to "watch" a document for active changes. When changes are detected the file will be re-embed and all workspaces using this file will automatically be updated.
 
 This enables you to reference a document and have it's content consistently updates so answers are always accurate to the original source.
 
@@ -47,9 +47,9 @@ This enables you to reference a document and have it's content consistently upda
 
 ### Desktop
 
-_this preview is currently disabled on desktop_
-
-# How to use
+- Any website link
+- Any file collected via a <b>Data connector</b> _(eg: Confluence, Github, and YouTube)_
+- Manually uploaded files **_still in development_**
 
 ## Enable the feature
 
@@ -60,6 +60,7 @@ First, you need to enable the feature from the feature preview management page.
   height={1080}
   width={1920}
   quality={100}
+  style={{ objectFit: "contain" }}
 />
 
 ## How to watch a file for changes
@@ -90,7 +91,7 @@ Any watched file is checked **hourly** if it is stale. A _stale_ file is any fil
 
 # Summary and notes
 
-Watching a file with TeamplGPT's Automatic Document Sync will periodically fetch and replace all embeddings of that document across all of your active workspace.
+Watching a file with AnythingLLM's Automatic Document Sync will periodically fetch and replace all embeddings of that document across all of your active workspace.
 
 This requires use of the connected embedder and therefore you may want to only watch a few files for resource reasons or cost concerns.
 
@@ -98,6 +99,6 @@ Currently, if you close the application or docker container, the watched files w
 
 # Troubleshooting
 
-If you are having issue with the document sync feature simply disable the toggle for the feature and it will not run any background workers while using TeamplGPT or on reboots.
+If you are having issue with the document sync feature simply disable the toggle for the feature and it will not run any background workers while using AnythingLLM or on reboots.
 
 Please ping the core team with a GitHub issue or Discord message for any questions or bug reports.

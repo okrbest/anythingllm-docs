@@ -1,0 +1,44 @@
+---
+title: "v1.5.8"
+description: "AnythingLLM Desktop v.1.5.8 변경 로그"
+---
+
+import Image from "next/image";
+
+<Image
+  src="/images/product/changelog/header-image.png"
+  height={1080}
+  width={1920}
+  quality={100}
+  alt="AnythingLLM Changelog v1.5.8"
+/>
+
+## 새로운 기능:
+
+- [x] [자동 문서 동기화 베타](/beta-preview/active-features/live-document-sync)
+- [x] 향후 기능을 위한 실험적 기능 지원 :)
+- [x] 자동 Ollama/LMStudio 엔드포인트 검색
+- [x] 내장된 Ollama 버전 0.1.47로 업데이트 (NVIDIA 및 AMD GPU 지원 자동화 포함!)
+- [x] Windows에서 AnythingLLM 설치 위치 지정 가능
+- [x] 문서 선택 UI 및 문서 선택 툴팁 재작업
+- [x] 사용자 정의 도메인 Confluence URL 지원
+- [x] 영어, 중국어, 스페인어, 프랑스어, 러시아어에 대한 i18n 지원
+- [x] Claude Sonnet 3.5 모델 지원
+- [x] 에이전트를 위한 searXNG 검색 지원
+- [x] 기록 보관을 위해 쿼리 모드 거부 응답을 DB의 채팅 기록 항목으로 유지
+- [x] 작업 공간 채팅을 위한 API에 OpenAI 호환 엔드포인트 지원 추가
+- [x] 일반 OpenAI 임베딩 제공자
+- [x] Azure URL에 대한 검증 제거
+
+## 수정 사항:
+
+- Prisma 클라이언트 제한 사항을 우회하기 위해 Linux 설치 프로그램 패치하여 AppImage 자동 압축 해제
+- 성능 향상을 위한 LanceDB 새로운 클라이언트 라이브러리로 업데이트
+- 너무 긴 파일 이름이 행에서 작업 또는 "캐시됨" 태그를 넘치는 문제 수정
+- 일부 Windows 버전과 호환되지 않는 내장 Ollama 문제 수정
+
+## 다음 계획:
+
+- 자동 문서 동기화 기능을 위한 로컬 파일 동기화
+- 파인 튜닝 파이프라인
+- AnythingLLM 앱 및 에이전트를 위한 사용자 정의 플러그인/기능
